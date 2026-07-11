@@ -1,0 +1,1863 @@
+[
+  {
+    "url": "http://localhost:8080/",
+    "status_code": 200,
+    "role": "guest",
+    "forms": [
+      {
+        "action": "http://localhost:8080/login.php",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "username",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Login",
+            "field_type": "submit",
+            "value": "Login",
+            "options": []
+          },
+          {
+            "name": "user_token",
+            "field_type": "hidden",
+            "value": "10777238e25cc26e1390c3d07818c140",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Welcome :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/instructions.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/instructions.php?doc=readme",
+      "http://localhost:8080/instructions.php?doc=PDF",
+      "http://localhost:8080/instructions.php?doc=changelog",
+      "http://localhost:8080/instructions.php?doc=PHPIDS-license"
+    ],
+    "danger_links": [
+      {
+        "url": "http://localhost:8080/instructions.php?doc=copying",
+        "method": "GET",
+        "reason": "danger_url"
+      }
+    ],
+    "query_params": {},
+    "page_title": "Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/setup.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/setup.php",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "create_db",
+            "field_type": "submit",
+            "value": "Create / Reset Database",
+            "options": []
+          },
+          {
+            "name": "user_token",
+            "field_type": "hidden",
+            "value": "7332e812486eb9b7367c8413b796c366",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Setup :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/brute/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/brute/",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "username",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Login",
+            "field_type": "submit",
+            "value": "Login",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Brute Force :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/exec/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/exec/",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "ip",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Command Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/csrf/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/csrf/",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "password_new",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password_conf",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Change",
+            "field_type": "submit",
+            "value": "Change",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Cross Site Request Forgery (CSRF) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/vulnerabilities/fi/?page=file1.php",
+      "http://localhost:8080/vulnerabilities/fi/?page=file2.php",
+      "http://localhost:8080/vulnerabilities/fi/?page=file3.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "page": [
+        "include.php"
+      ]
+    },
+    "page_title": "Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/upload/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/upload/",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "MAX_FILE_SIZE",
+            "field_type": "hidden",
+            "value": "100000",
+            "options": []
+          },
+          {
+            "name": "uploaded",
+            "field_type": "file",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Upload",
+            "field_type": "submit",
+            "value": "Upload",
+            "options": []
+          }
+        ],
+        "enctype": "multipart/form-data"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: File Upload :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/captcha/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/captcha/",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "step",
+            "field_type": "hidden",
+            "value": "1",
+            "options": []
+          },
+          {
+            "name": "password_new",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password_conf",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Change",
+            "field_type": "submit",
+            "value": "Change",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Insecure CAPTCHA :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/sqli/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/sqli/",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "id",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/sqli_blind/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/sqli_blind/",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "id",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: SQL Injection (Blind) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/weak_id/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/weak_id/",
+        "method": "POST",
+        "fields": [],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Weak Session IDs :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/xss_d/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/xss_d/",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "default",
+            "field_type": "select",
+            "value": "",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: DOM Based Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/xss_r/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/xss_r/",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "name",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Reflected Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/xss_s/",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "txtName",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "mtxMessage",
+            "field_type": "textarea",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "btnSign",
+            "field_type": "submit",
+            "value": "Sign Guestbook",
+            "options": []
+          },
+          {
+            "name": "btnClear",
+            "field_type": "submit",
+            "value": "Clear Guestbook",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Stored Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/csp/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/csp/",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "include",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: Content Security Policy (CSP) Bypass :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/javascript/",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/javascript/",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "token",
+            "field_type": "hidden",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "phrase",
+            "field_type": "text",
+            "value": "ChangeMe",
+            "options": []
+          },
+          {
+            "name": "send",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Vulnerability: JavaScript Attacks :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/security.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/security.php",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "security",
+            "field_type": "select",
+            "value": "",
+            "options": [
+              "low",
+              "medium",
+              "high",
+              "impossible"
+            ]
+          },
+          {
+            "name": "seclev_submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          },
+          {
+            "name": "user_token",
+            "field_type": "hidden",
+            "value": "ff22218f034ca766afbef127189745a6",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/security.php?phpids=on",
+      "http://localhost:8080/security.php?test=%22><script>eval(window.name)</script>",
+      "http://localhost:8080/ids_log.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "DVWA Security :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/phpinfo.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "phpinfo()",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/about.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/instructions.php?doc=PHPIDS-license"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "About :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/instructions.php?doc=readme",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/instructions.php?doc=readme",
+      "http://localhost:8080/instructions.php?doc=PDF",
+      "http://localhost:8080/instructions.php?doc=changelog",
+      "http://localhost:8080/instructions.php?doc=PHPIDS-license"
+    ],
+    "danger_links": [
+      {
+        "url": "http://localhost:8080/instructions.php?doc=copying",
+        "method": "GET",
+        "reason": "danger_url"
+      }
+    ],
+    "query_params": {
+      "doc": [
+        "readme"
+      ]
+    },
+    "page_title": "Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/instructions.php?doc=PDF",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/instructions.php?doc=readme",
+      "http://localhost:8080/instructions.php?doc=PDF",
+      "http://localhost:8080/instructions.php?doc=changelog",
+      "http://localhost:8080/instructions.php?doc=PHPIDS-license"
+    ],
+    "danger_links": [
+      {
+        "url": "http://localhost:8080/instructions.php?doc=copying",
+        "method": "GET",
+        "reason": "danger_url"
+      }
+    ],
+    "query_params": {
+      "doc": [
+        "PDF"
+      ]
+    },
+    "page_title": "Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/instructions.php?doc=changelog",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/instructions.php?doc=readme",
+      "http://localhost:8080/instructions.php?doc=PDF",
+      "http://localhost:8080/instructions.php?doc=changelog",
+      "http://localhost:8080/instructions.php?doc=PHPIDS-license"
+    ],
+    "danger_links": [
+      {
+        "url": "http://localhost:8080/instructions.php?doc=copying",
+        "method": "GET",
+        "reason": "danger_url"
+      }
+    ],
+    "query_params": {
+      "doc": [
+        "changelog"
+      ]
+    },
+    "page_title": "Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/instructions.php?doc=PHPIDS-license",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/instructions.php?doc=readme",
+      "http://localhost:8080/instructions.php?doc=PDF",
+      "http://localhost:8080/instructions.php?doc=changelog",
+      "http://localhost:8080/instructions.php?doc=PHPIDS-license"
+    ],
+    "danger_links": [
+      {
+        "url": "http://localhost:8080/instructions.php?doc=copying",
+        "method": "GET",
+        "reason": "danger_url"
+      }
+    ],
+    "query_params": {
+      "doc": [
+        "PHPIDS-license"
+      ]
+    },
+    "page_title": "Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/brute/?username=&password=&Login=Login",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/brute/?username=&password=&Login=Login",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "username",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Login",
+            "field_type": "submit",
+            "value": "Login",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "username": [
+        ""
+      ],
+      "password": [
+        ""
+      ],
+      "Login": [
+        "Login"
+      ]
+    },
+    "page_title": "Vulnerability: Brute Force :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/csrf/?password_new=&password_conf=&Change=Change",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/csrf/?password_new=&password_conf=&Change=Change",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "password_new",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password_conf",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Change",
+            "field_type": "submit",
+            "value": "Change",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "password_new": [
+        ""
+      ],
+      "password_conf": [
+        ""
+      ],
+      "Change": [
+        "Change"
+      ]
+    },
+    "page_title": "Vulnerability: Cross Site Request Forgery (CSRF) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/fi/?page=file1.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "page": [
+        "file1.php"
+      ]
+    },
+    "page_title": "Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/fi/?page=file2.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "page": [
+        "file2.php"
+      ]
+    },
+    "page_title": "Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/fi/?page=file3.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "page": [
+        "file3.php"
+      ]
+    },
+    "page_title": "Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/sqli/?id=&Submit=Submit",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/sqli/?id=&Submit=Submit",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "id",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "id": [
+        ""
+      ],
+      "Submit": [
+        "Submit"
+      ]
+    },
+    "page_title": "Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/sqli_blind/?id=&Submit=Submit",
+    "status_code": 404,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/sqli_blind/?id=&Submit=Submit",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "id",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "id": [
+        ""
+      ],
+      "Submit": [
+        "Submit"
+      ]
+    },
+    "page_title": "Vulnerability: SQL Injection (Blind) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/xss_d/?default=",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/xss_d/?default=",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "default",
+            "field_type": "select",
+            "value": "",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "default": [
+        ""
+      ]
+    },
+    "page_title": "Vulnerability: DOM Based Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/vulnerabilities/xss_r/?name=",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/vulnerabilities/xss_r/?name=",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "name",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "name": [
+        ""
+      ]
+    },
+    "page_title": "Vulnerability: Reflected Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/security.php?phpids=on",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/security.php?phpids=on",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "security",
+            "field_type": "select",
+            "value": "",
+            "options": [
+              "low",
+              "medium",
+              "high",
+              "impossible"
+            ]
+          },
+          {
+            "name": "seclev_submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          },
+          {
+            "name": "user_token",
+            "field_type": "hidden",
+            "value": "265d1bac98e5abe2f07042d26a23d622",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/security.php?phpids=off",
+      "http://localhost:8080/security.php?test=%22><script>eval(window.name)</script>",
+      "http://localhost:8080/ids_log.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "phpids": [
+        "on"
+      ]
+    },
+    "page_title": "DVWA Security :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/security.php?test=%22><script>eval(window.name)</script>",
+    "status_code": 200,
+    "role": "member",
+    "forms": [],
+    "links": [],
+    "danger_links": [],
+    "query_params": {
+      "test": [
+        "\"><script>eval(window.name)</script>"
+      ]
+    },
+    "page_title": "",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/ids_log.php",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/ids_log.php",
+        "method": "GET",
+        "fields": [
+          {
+            "name": "clear_log",
+            "field_type": "submit",
+            "value": "Clear Log",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php"
+    ],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "PHPIDS Log :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  },
+  {
+    "url": "http://localhost:8080/security.php?phpids=off",
+    "status_code": 200,
+    "role": "member",
+    "forms": [
+      {
+        "action": "http://localhost:8080/security.php?phpids=off",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "security",
+            "field_type": "select",
+            "value": "",
+            "options": [
+              "low",
+              "medium",
+              "high",
+              "impossible"
+            ]
+          },
+          {
+            "name": "seclev_submit",
+            "field_type": "submit",
+            "value": "Submit",
+            "options": []
+          },
+          {
+            "name": "user_token",
+            "field_type": "hidden",
+            "value": "66012627db1095656a20319efda983ab",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [
+      "http://localhost:8080/",
+      "http://localhost:8080/instructions.php",
+      "http://localhost:8080/setup.php",
+      "http://localhost:8080/vulnerabilities/brute/",
+      "http://localhost:8080/vulnerabilities/exec/",
+      "http://localhost:8080/vulnerabilities/csrf/",
+      "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+      "http://localhost:8080/vulnerabilities/upload/",
+      "http://localhost:8080/vulnerabilities/captcha/",
+      "http://localhost:8080/vulnerabilities/sqli/",
+      "http://localhost:8080/vulnerabilities/sqli_blind/",
+      "http://localhost:8080/vulnerabilities/weak_id/",
+      "http://localhost:8080/vulnerabilities/xss_d/",
+      "http://localhost:8080/vulnerabilities/xss_r/",
+      "http://localhost:8080/vulnerabilities/xss_s/",
+      "http://localhost:8080/vulnerabilities/csp/",
+      "http://localhost:8080/vulnerabilities/javascript/",
+      "http://localhost:8080/security.php",
+      "http://localhost:8080/phpinfo.php",
+      "http://localhost:8080/about.php",
+      "http://localhost:8080/security.php?phpids=on",
+      "http://localhost:8080/security.php?test=%22><script>eval(window.name)</script>",
+      "http://localhost:8080/ids_log.php"
+    ],
+    "danger_links": [],
+    "query_params": {
+      "phpids": [
+        "off"
+      ]
+    },
+    "page_title": "DVWA Security :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  }
+]

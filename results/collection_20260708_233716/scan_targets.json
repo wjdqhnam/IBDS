@@ -1,0 +1,1167 @@
+[
+  {
+    "zap_message_id": "27",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+    "base_url": "http://localhost:8080/vulnerabilities/fi/",
+    "param_location": "query",
+    "params": {
+      "page": "include.php"
+    },
+    "scannable_params": [
+      "page"
+    ],
+    "parameters": [
+      {
+        "name": "page",
+        "scan": true,
+        "sample_values": [
+          "include.php"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:18 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "3947",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: File Inclusion</h1>\r\n\r\n\t<div class=\"warning\">The PHP function <em>allow_url_include</em> is not enabled.</div>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t[<em><a href=\"?page=file1.php\">file1.php</a></em>] - [<em><a href=\"?page=file2.php\">file2.php</a></em>] - [<em><a href=\"?page=file3.php\">file3.php</a></em>]\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Remote_File_Inclusion\" target=\"_blank\">https://en.wikipedia.org/wiki/Remote_File_Inclusion</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Top_10_2007-A3\" target=\"_blank\">https://www.owasp.org/index.php/Top_10_2007-A3</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=fi&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=fi&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "93",
+    "method": "GET",
+    "url": "http://localhost:8080/instructions.php?doc=PDF",
+    "base_url": "http://localhost:8080/instructions.php",
+    "param_location": "query",
+    "params": {
+      "doc": "PDF"
+    },
+    "scannable_params": [
+      "doc"
+    ],
+    "parameters": [
+      {
+        "name": "doc",
+        "scan": true,
+        "sample_values": [
+          "PDF"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/instructions.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "3449",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\".\">Home</a></li>\n<li class=\"selected\"><a href=\"instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Instructions</h1>\r\n\r\n\t<div class=\"submenu\"><span class=\"submenu_item\"><a href=\"?doc=readme\">Read Me</a></span><span class=\"submenu_item selected\"><a href=\"?doc=PDF\">PDF Guide</a></span><span class=\"submenu_item\"><a href=\"?doc=changelog\">Change Log</a></span><span class=\"submenu_item\"><a href=\"?doc=copying\">Copying</a></span><span class=\"submenu_item\"><a href=\"?doc=PHPIDS-license\">PHPIDS License</a></span></div>\r\n\r\n\t<span class=\"fixed\">\r\n\t\tDamn Vulnerable Web Application (DVWA) <a href=\"docs/DVWA_v1.3.pdf\">Official Documentation PDF v1.3</a><br />\r\n\r\n\t</span>\r\n</div>\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t<div class=\"body_padded\"><div class=\"message\">PHPIDS is now enabled</div></div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "105",
+    "method": "GET",
+    "url": "http://localhost:8080/security.php?phpids=on",
+    "base_url": "http://localhost:8080/security.php",
+    "param_location": "query",
+    "params": {
+      "phpids": "on"
+    },
+    "scannable_params": [
+      "phpids"
+    ],
+    "parameters": [
+      {
+        "name": "phpids",
+        "scan": true,
+        "sample_values": [
+          "on"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/security.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "/security.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "109",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/captcha/",
+    "base_url": "http://localhost:8080/vulnerabilities/captcha/",
+    "param_location": "body",
+    "params": {
+      "step": "1",
+      "password_new": "ZAP",
+      "password_conf": "ZAP",
+      "Change": "Change"
+    },
+    "scannable_params": [
+      "step",
+      "password_new",
+      "password_conf",
+      "Change"
+    ],
+    "parameters": [
+      {
+        "name": "step",
+        "scan": true,
+        "sample_values": [
+          "1"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "password_new",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "password_conf",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Change",
+        "scan": true,
+        "sample_values": [
+          "Change"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/captcha/",
+      "content-length": "55"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "step=1&password_new=ZAP&password_conf=ZAP&Change=Change",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4714",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Insecure CAPTCHA :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n\t<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Insecure CAPTCHA</h1>\r\n\r\n\t<div class=\"warning\"><em>reCAPTCHA API key missing</em> from config file: /var/www/html/config/config.inc.php</div>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form action=\"#\" method=\"POST\" style=\"display:none;\">\r\n\t\t\t<h3>Change your password:</h3>\r\n\t\t\t<br />\r\n\r\n\t\t\t<input type=\"hidden\" name=\"step\" value=\"1\" />\n\t\t\tNew password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_new\"><br />\r\n\t\t\tConfirm new password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_conf\"><br />\r\n\r\n\t\t\t\n\t\t<script src='https://www.google.com/recaptcha/api.js'></script>\n\t\t<br /> <div class='g-recaptcha' data-theme='dark' data-sitekey=''></div>\n\t\r\n\t\t\t<br />\r\n\r\n\t\t\t<input type=\"submit\" value=\"Change\" name=\"Change\">\r\n\t\t</form>\r\n\t\t<em>Please register for a key</em> from reCAPTCHA: <a href=\"https://www.google.com/recaptcha/admin/create\" target=\"_blank\">https://www.google.com/recaptcha/admin/create</a>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/CAPTCHA\" target=\"_blank\">https://en.wikipedia.org/wiki/CAPTCHA</a></li>\r\n\t\t<li><a href=\"https://www.google.com/recaptcha/\" target=\"_blank\">https://www.google.com/recaptcha/</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Testing_for_Captcha_(OWASP-AT-012)\" target=\"_blank\">https://www.owasp.org/index.php/Testing_for_Captcha_(OWASP-AT-012)</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=captcha&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=captcha&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "110",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/upload/",
+    "base_url": "http://localhost:8080/vulnerabilities/upload/",
+    "param_location": "body",
+    "params": {
+      "MAX_FILE_SIZE": "100000",
+      "uploaded": "test_file.txt",
+      "Upload": "Upload"
+    },
+    "scannable_params": [
+      "MAX_FILE_SIZE",
+      "uploaded",
+      "Upload"
+    ],
+    "parameters": [
+      {
+        "name": "MAX_FILE_SIZE",
+        "scan": true,
+        "sample_values": [
+          "100000"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "uploaded",
+        "scan": true,
+        "sample_values": [
+          "test_file.txt"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Upload",
+        "scan": true,
+        "sample_values": [
+          "Upload"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/upload/",
+      "content-length": "57"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "MAX_FILE_SIZE=100000&uploaded=test_file.txt&Upload=Upload",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4232",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: File Upload :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: File Upload</h1>\r\n\r\n\t\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form enctype=\"multipart/form-data\" action=\"#\" method=\"POST\">\r\n\t\t\t<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"100000\" />\r\n\t\t\tChoose an image to upload:<br /><br />\r\n\t\t\t<input name=\"uploaded\" type=\"file\" /><br />\r\n\t\t\t<br />\r\n\t\t\t<input type=\"submit\" name=\"Upload\" value=\"Upload\" />\n\r\n\t\t</form>\r\n\t\t<pre>Your image was not uploaded.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Unrestricted_File_Upload\" target=\"_blank\">https://www.owasp.org/index.php/Unrestricted_File_Upload</a></li>\r\n\t\t<li><a href=\"https://blogs.securiteam.com/index.php/archives/1268\" target=\"_blank\">https://blogs.securiteam.com/index.php/archives/1268</a></li>\r\n\t\t<li><a href=\"https://www.acunetix.com/websitesecurity/upload-forms-threat/\" target=\"_blank\">https://www.acunetix.com/websitesecurity/upload-forms-threat/</a></li>\r\n\t</ul>\r\n</div>\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=upload&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=upload&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "116",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "param_location": "body",
+    "params": {
+      "txtName": "ZAP",
+      "mtxMessage": "",
+      "btnClear": "Clear Guestbook"
+    },
+    "scannable_params": [
+      "txtName",
+      "mtxMessage",
+      "btnClear"
+    ],
+    "parameters": [
+      {
+        "name": "txtName",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "mtxMessage",
+        "scan": true,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "btnClear",
+        "scan": true,
+        "sample_values": [
+          "Clear Guestbook"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+      "content-length": "48"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "txtName=ZAP&mtxMessage=&btnClear=Clear+Guestbook",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4901",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Stored Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Stored Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form method=\"post\" name=\"guestform\" \">\r\n\t\t\t<table width=\"550\" border=\"0\" cellpadding=\"2\" cellspacing=\"1\">\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Name *</td>\r\n\t\t\t\t\t<td><input name=\"txtName\" type=\"text\" size=\"30\" maxlength=\"10\"></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Message *</td>\r\n\t\t\t\t\t<td><textarea name=\"mtxMessage\" cols=\"50\" rows=\"3\" maxlength=\"50\"></textarea></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">&nbsp;</td>\r\n\t\t\t\t\t<td>\r\n\t\t\t\t\t\t<input name=\"btnSign\" type=\"submit\" value=\"Sign Guestbook\" onclick=\"return validateGuestbookForm(this.form);\" />\r\n\t\t\t\t\t\t<input name=\"btnClear\" type=\"submit\" value=\"Clear Guestbook\" onClick=\"return confirmClearGuestbook();\" />\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\n\r\n\t\t</form>\r\n\t\t\r\n\t</div>\r\n\t<br />\r\n\r\n\t\r\n\t<br />\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet\" target=\"_blank\">https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_scripting</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/xss-faq.html\" target=\"_blank\">http://www.cgisecurity.com/xss-faq.html</a></li>\r\n\t\t<li><a href=\"http://www.scriptalert1.com/\" target=\"_blank\">http://www.scriptalert1.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_s&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_s&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "117",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/xss_d/?default",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_d/",
+    "param_location": "query",
+    "params": {
+      "default": ""
+    },
+    "scannable_params": [
+      "default"
+    ],
+    "parameters": [
+      {
+        "name": "default",
+        "scan": true,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_d/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4807",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: DOM Based Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t<div class=\"body_padded\">\r\n\t<h1>Vulnerability: DOM Based Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n \r\n \t\t<p>Please choose a language:</p>\r\n\r\n\t\t<form name=\"XSS\" method=\"GET\">\r\n\t\t\t<select name=\"default\">\r\n\t\t\t\t<script>\r\n\t\t\t\t\tif (document.location.href.indexOf(\"default=\") >= 0) {\r\n\t\t\t\t\t\tvar lang = document.location.href.substring(document.location.href.indexOf(\"default=\")+8);\r\n\t\t\t\t\t\tdocument.write(\"<option value='\" + lang + \"'>\" + decodeURI(lang) + \"</option>\");\r\n\t\t\t\t\t\tdocument.write(\"<option value='' disabled='disabled'>----</option>\");\r\n\t\t\t\t\t}\r\n\t\t\t\t\t    \r\n\t\t\t\t\tdocument.write(\"<option value='English'>English</option>\");\r\n\t\t\t\t\tdocument.write(\"<option value='French'>French</option>\");\r\n\t\t\t\t\tdocument.write(\"<option value='Spanish'>Spanish</option>\");\r\n\t\t\t\t\tdocument.write(\"<option value='German'>German</option>\");\r\n\t\t\t\t</script>\r\n\t\t\t</select>\r\n\t\t\t<input type=\"submit\" value=\"Select\" />\r\n\t\t</form>\r\n\t</div>\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)\" target=\"_blank\">https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)</a></li>\r\n\t\t<li><a href=\"https://www.acunetix.com/blog/articles/dom-xss-explained/\" target=\"_blank\">https://www.acunetix.com/blog/articles/dom-xss-explained/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_d&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_d&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "121",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/xss_r/?name=ZAP",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_r/",
+    "param_location": "query",
+    "params": {
+      "name": "ZAP"
+    },
+    "scannable_params": [
+      "name"
+    ],
+    "parameters": [
+      {
+        "name": "name",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_r/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "x-xss-protection": "0",
+      "vary": "Accept-Encoding",
+      "content-length": "4357",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Reflected Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Reflected Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form name=\"XSS\" action=\"#\" method=\"GET\">\r\n\t\t\t<p>\r\n\t\t\t\tWhat's your name?\r\n\t\t\t\t<input type=\"text\" name=\"name\">\r\n\t\t\t\t<input type=\"submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t<pre>Hello ZAP</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet\" target=\"_blank\">https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_scripting</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/xss-faq.html\" target=\"_blank\">http://www.cgisecurity.com/xss-faq.html</a></li>\r\n\t\t<li><a href=\"http://www.scriptalert1.com/\" target=\"_blank\">http://www.scriptalert1.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_r&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_r&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "123",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/javascript/",
+    "base_url": "http://localhost:8080/vulnerabilities/javascript/",
+    "param_location": "body",
+    "params": {
+      "token": "",
+      "phrase": "ChangeMe",
+      "send": "Submit"
+    },
+    "scannable_params": [
+      "phrase",
+      "send"
+    ],
+    "parameters": [
+      {
+        "name": "token",
+        "scan": false,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "phrase",
+        "scan": true,
+        "sample_values": [
+          "ChangeMe"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "send",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/javascript/",
+      "content-length": "34"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "token=&phrase=ChangeMe&send=Submit",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:19 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-type": "text/html;charset=utf-8",
+      "content-length": "8412"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: JavaScript Attacks :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t<div class=\"body_padded\">\n\t<h1>Vulnerability: JavaScript Attacks</h1>\n\n\t<div class=\"vulnerable_code_area\">\n\t<p>\n\t\tSubmit the word \"success\" to win.\n\t</p>\n\n\t<p>You got the phrase wrong.</p>\n\n\t<form name=\"low_js\" method=\"post\">\n\t\t<input type=\"hidden\" name=\"token\" value=\"\" id=\"token\" />\n\t\t<label for=\"phrase\">Phrase</label> <input type=\"text\" name=\"phrase\" value=\"ChangeMe\" id=\"phrase\" />\n\t\t<input type=\"submit\" id=\"send\" name=\"send\" value=\"Submit\" />\n\t</form><script>\n\n/*\nMD5 code from here\nhttps://github.com/blueimp/JavaScript-MD5\n*/\n\n!function(n){\"use strict\";function t(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}function r(n,t){return n<<t|n>>>32-t}function e(n,e,o,u,c,f){return t(r(t(t(e,n),t(u,f)),c),o)}function o(n,t,r,o,u,c,f){return e(t&r|~t&o,n,t,u,c,f)}function u(n,t,r,o,u,c,f){return e(t&o|r&~o,n,t,u,c,f)}function c(n,t,r,o,u,c,f){return e(t^r^o,n,t,u,c,f)}function f(n,t,r,o,u,c,f){return e(r^(t|~o),n,t,u,c,f)}function i(n,r){n[r>>5]|=128<<r%32,n[14+(r+64>>>9<<4)]=r;var e,i,a,d,h,l=1732584193,g=-271733879,v=-1732584194,m=271733878;for(e=0;e<n.length;e+=16)i=l,a=g,d=v,h=m,g=f(g=f(g=f(g=f(g=c(g=c(g=c(g=c(g=u(g=u(g=u(g=u(g=o(g=o(g=o(g=o(g,v=o(v,m=o(m,l=o(l,g,v,m,n[e],7,-680876936),g,v,n[e+1],12,-389564586),l,g,n[e+2],17,606105819),m,l,n[e+3],22,-1044525330),v=o(v,m=o(m,l=o(l,g,v,m,n[e+4],7,-176418897),g,v,n[e+5],12,1200080426),l,g,n[e+6],17,-1473231341),m,l,n[e+7],22,-45705983),v=o(v,m=o(m,l=o(l,g,v,m,n[e+8],7,1770035416),g,v,n[e+9],12,-1958414417),l,g,n[e+10],17,-42063),m,l,n[e+11],22,-1990404162),v=o(v,m=o(m,l=o(l,g,v,m,n[e+12],7,1804603682),g,v,n[e+13],12,-40341101),l,g,n[e+14],17,-1502002290),m,l,n[e+15],22,1236535329),v=u(v,m=u(m,l=u(l,g,v,m,n[e+1],5,-165796510),g,v,n[e+6],9,-1069501632),l,g,n[e+11],14,643717713),m,l,n[e],20,-373897302),v=u(v,m=u(m,l=u(l,g,v,m,n[e+5],5,-701558691),g,v,n[e+10],9,38016083),l,g,n[e+15],14,-660478335),m,l,n[e+4],20,-405537848),v=u(v,m=u(m,l=u(l,g,v,m,n[e+9],5,568446438),g,v,n[e+14],9,-1019803690),l,g,n[e+3],14,-187363961),m,l,n[e+8],20,1163531501),v=u(v,m=u(m,l=u(l,g,v,m,n[e+13],5,-1444681467),g,v,n[e+2],9,-51403784),l,g,n[e+7],14,1735328473),m,l,n[e+12],20,-1926607734),v=c(v,m=c(m,l=c(l,g,v,m,n[e+5],4,-378558),g,v,n[e+8],11,-2022574463),l,g,n[e+11],16,1839030562),m,l,n[e+14],23,-35309556),v=c(v,m=c(m,l=c(l,g,v,m,n[e+1],4,-1530992060),g,v,n[e+4],11,1272893353),l,g,n[e+7],16,-155497632),m,l,n[e+10],23,-1094730640),v=c(v,m=c(m,l=c(l,g,v,m,n[e+13],4,681279174),g,v,n[e],11,-358537222),l,g,n[e+3],16,-722521979),m,l,n[e+6],23,76029189),v=c(v,m=c(m,l=c(l,g,v,m,n[e+9],4,-640364487),g,v,n[e+12],11,-421815835),l,g,n[e+15],16,530742520),m,l,n[e+2],23,-995338651),v=f(v,m=f(m,l=f(l,g,v,m,n[e],6,-198630844),g,v,n[e+7],10,1126891415),l,g,n[e+14],15,-1416354905),m,l,n[e+5],21,-57434055),v=f(v,m=f(m,l=f(l,g,v,m,n[e+12],6,1700485571),g,v,n[e+3],10,-1894986606),l,g,n[e+10],15,-1051523),m,l,n[e+1],21,-2054922799),v=f(v,m=f(m,l=f(l,g,v,m,n[e+8],6,1873313359),g,v,n[e+15],10,-30611744),l,g,n[e+6],15,-1560198380),m,l,n[e+13],21,1309151649),v=f(v,m=f(m,l=f(l,g,v,m,n[e+4],6,-145523070),g,v,n[e+11],10,-1120210379),l,g,n[e+2],15,718787259),m,l,n[e+9],21,-343485551),l=t(l,i),g=t(g,a),v=t(v,d),m=t(m,h);return[l,g,v,m]}function a(n){var t,r=\"\",e=32*n.length;for(t=0;t<e;t+=8)r+=String.fromCharCode(n[t>>5]>>>t%32&255);return r}function d(n){var t,r=[];for(r[(n.length>>2)-1]=void 0,t=0;t<r.length;t+=1)r[t]=0;var e=8*n.length;for(t=0;t<e;t+=8)r[t>>5]|=(255&n.charCodeAt(t/8))<<t%32;return r}function h(n){return a(i(d(n),8*n.length))}function l(n,t){var r,e,o=d(n),u=[],c=[];for(u[15]=c[15]=void 0,o.length>16&&(o=i(o,8*n.length)),r=0;r<16;r+=1)u[r]=909522486^o[r],c[r]=1549556828^o[r];return e=i(u.concat(d(t)),512+8*t.length),a(i(c.concat(e),640))}function g(n){var t,r,e=\"\";for(r=0;r<n.length;r+=1)t=n.charCodeAt(r),e+=\"0123456789abcdef\".charAt(t>>>4&15)+\"0123456789abcdef\".charAt(15&t);return e}function v(n){return unescape(encodeURIComponent(n))}function m(n){return h(v(n))}function p(n){return g(m(n))}function s(n,t){return l(v(n),v(t))}function C(n,t){return g(s(n,t))}function A(n,t,r){return t?r?s(t,n):C(t,n):r?m(n):p(n)}\"function\"==typeof define&&define.amd?define(function(){return A}):\"object\"==typeof module&&module.exports?module.exports=A:n.md5=A}(this);\n\n\tfunction rot13(inp) {\n\t\treturn inp.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});\n\t}\n\n\tfunction generate_token() {\n\t\tvar phrase = document.getElementById(\"phrase\").value;\n\t\tdocument.getElementById(\"token\").value = md5(rot13(phrase));\n\t}\n\n\tgenerate_token();\n</script>\t</div>\n\t<h2>More Information</h2>\n\t<ul>\n\t\t<li><a href=\"https://www.w3schools.com/js/\" target=\"_blank\">https://www.w3schools.com/js/</a></li>\n\t\t<li><a href=\"https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL\" target=\"_blank\">https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL</a></li>\n\t\t<li><a href=\"https://ponyfoo.com/articles/es6-proxies-in-depth\" target=\"_blank\">https://ponyfoo.com/articles/es6-proxies-in-depth</a></li>\n\t</ul>\n\t<p><i>Module developed by <a href='https://twitter.com/digininja'>Digininja</a>.</i></p>\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=javascript&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=javascript&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "125",
+    "method": "GET",
+    "url": "http://localhost:8080/security.php?test=%2522%3E%3Cscript%3Eeval(window.name)%3C/script%3E",
+    "base_url": "http://localhost:8080/security.php",
+    "param_location": "query",
+    "params": {
+      "test": "%22><script>eval(window.name)</script>"
+    },
+    "scannable_params": [
+      "test"
+    ],
+    "parameters": [
+      {
+        "name": "test",
+        "scan": true,
+        "sample_values": [
+          "%22><script>eval(window.name)</script>"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/security.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:20 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "content-length": "58",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": "Hacking attempt detected and logged.<br />Have a nice day."
+  },
+  {
+    "zap_message_id": "126",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/sqli/?Submit=Submit&id=ZAP",
+    "base_url": "http://localhost:8080/vulnerabilities/sqli/",
+    "param_location": "query",
+    "params": {
+      "Submit": "Submit",
+      "id": "ZAP"
+    },
+    "scannable_params": [
+      "Submit",
+      "id"
+    ],
+    "parameters": [
+      {
+        "name": "Submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "id",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/sqli/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:20 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4478",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: SQL Injection</h1>\r\n\r\n\t\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\t<p>\r\n\t\t\t\tUser ID:\n\t\t\t\t<input type=\"text\" size=\"15\" name=\"id\">\n\t\t\t\t<input type=\"submit\" name=\"Submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"http://www.securiteam.com/securityreviews/5DP0N1P76E.html\" target=\"_blank\">http://www.securiteam.com/securityreviews/5DP0N1P76E.html</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/SQL_injection\" target=\"_blank\">https://en.wikipedia.org/wiki/SQL_injection</a></li>\r\n\t\t<li><a href=\"http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/\" target=\"_blank\">http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/</a></li>\r\n\t\t<li><a href=\"http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet\" target=\"_blank\">http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/SQL_Injection\" target=\"_blank\">https://www.owasp.org/index.php/SQL_Injection</a></li>\r\n\t\t<li><a href=\"http://bobby-tables.com/\" target=\"_blank\">http://bobby-tables.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=sqli&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=sqli&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "127",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/exec/",
+    "base_url": "http://localhost:8080/vulnerabilities/exec/",
+    "param_location": "body",
+    "params": {
+      "ip": "ZAP",
+      "Submit": "Submit"
+    },
+    "scannable_params": [
+      "ip",
+      "Submit"
+    ],
+    "parameters": [
+      {
+        "name": "ip",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/exec/",
+      "content-length": "20"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "ip=ZAP&Submit=Submit",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:21 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4177",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Command Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Command Injection</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<h2>Ping a device</h2>\r\n\r\n\t\t<form name=\"ping\" action=\"#\" method=\"post\">\r\n\t\t\t<p>\r\n\t\t\t\tEnter an IP address:\r\n\t\t\t\t<input type=\"text\" name=\"ip\" size=\"30\">\r\n\t\t\t\t<input type=\"submit\" name=\"Submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t<pre></pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"http://www.scribd.com/doc/2530476/Php-Endangers-Remote-Code-Execution\" target=\"_blank\">http://www.scribd.com/doc/2530476/Php-Endangers-Remote-Code-Execution</a></li>\r\n\t\t<li><a href=\"http://www.ss64.com/bash/\" target=\"_blank\">http://www.ss64.com/bash/</a></li>\r\n\t\t<li><a href=\"http://www.ss64.com/nt/\" target=\"_blank\">http://www.ss64.com/nt/</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Command_Injection\" target=\"_blank\">https://www.owasp.org/index.php/Command_Injection</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=exec&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=exec&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "130",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/brute/?Login=Login&password=ZAP&username=ZAP",
+    "base_url": "http://localhost:8080/vulnerabilities/brute/",
+    "param_location": "query",
+    "params": {
+      "Login": "Login",
+      "password": "ZAP",
+      "username": "ZAP"
+    },
+    "scannable_params": [
+      "Login",
+      "password",
+      "username"
+    ],
+    "parameters": [
+      {
+        "name": "Login",
+        "scan": true,
+        "sample_values": [
+          "Login"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "password",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "username",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/brute/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:21 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4374",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Brute Force :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"selected\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Brute Force</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<h2>Login</h2>\r\n\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\tUsername:<br />\r\n\t\t\t<input type=\"text\" name=\"username\"><br />\r\n\t\t\tPassword:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password\"><br />\r\n\t\t\t<br />\r\n\t\t\t<input type=\"submit\" value=\"Login\" name=\"Login\">\n\r\n\t\t</form>\r\n\t\t<pre><br />Username and/or password incorrect.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)\" target=\"_blank\">https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)</a></li>\r\n\t\t<li><a href=\"http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password\" target=\"_blank\">http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password</a></li>\r\n\t\t<li><a href=\"http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.html\" target=\"_blank\">http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.html</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=brute&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=brute&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "131",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/sqli_blind/?Submit=Submit&id=ZAP",
+    "base_url": "http://localhost:8080/vulnerabilities/sqli_blind/",
+    "param_location": "query",
+    "params": {
+      "Submit": "Submit",
+      "id": "ZAP"
+    },
+    "scannable_params": [
+      "Submit",
+      "id"
+    ],
+    "parameters": [
+      {
+        "name": "Submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "id",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/sqli_blind/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 404,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:21 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "content-length": "4566",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: SQL Injection (Blind) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: SQL Injection (Blind)</h1>\r\n\r\n\t\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\t<p>\r\n\t\t\t\tUser ID:\n\t\t\t\t<input type=\"text\" size=\"15\" name=\"id\">\n\t\t\t\t<input type=\"submit\" name=\"Submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t<pre>User ID is MISSING from the database.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"http://www.securiteam.com/securityreviews/5DP0N1P76E.html\" target=\"_blank\">http://www.securiteam.com/securityreviews/5DP0N1P76E.html</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/SQL_injection\" target=\"_blank\">https://en.wikipedia.org/wiki/SQL_injection</a></li>\r\n\t\t<li><a href=\"http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/\" target=\"_blank\">http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/</a></li>\r\n\t\t<li><a href=\"http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet\" target=\"_blank\">http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Blind_SQL_Injection\" target=\"_blank\">https://www.owasp.org/index.php/Blind_SQL_Injection</a></li>\r\n\t\t<li><a href=\"http://bobby-tables.com/\" target=\"_blank\">http://bobby-tables.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=sqli_blind&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=sqli_blind&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "132",
+    "method": "GET",
+    "url": "http://localhost:8080/vulnerabilities/csrf/?Change=Change&password_conf=ZAP&password_new=ZAP",
+    "base_url": "http://localhost:8080/vulnerabilities/csrf/",
+    "param_location": "query",
+    "params": {
+      "Change": "Change",
+      "password_conf": "ZAP",
+      "password_new": "ZAP"
+    },
+    "scannable_params": [
+      "Change",
+      "password_conf",
+      "password_new"
+    ],
+    "parameters": [
+      {
+        "name": "Change",
+        "scan": true,
+        "sample_values": [
+          "Change"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "password_conf",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "password_new",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/csrf/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:22 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4296",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Cross Site Request Forgery (CSRF) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Cross Site Request Forgery (CSRF)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<h3>Change your admin password:</h3>\r\n\t\t<br />\r\n\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\tNew password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_new\"><br />\r\n\t\t\tConfirm new password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_conf\"><br />\r\n\t\t\t<br />\r\n\t\t\t<input type=\"submit\" value=\"Change\" name=\"Change\">\n\r\n\t\t</form>\r\n\t\t<pre>Password Changed.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-Site_Request_Forgery\" target=\"_blank\">https://www.owasp.org/index.php/Cross-Site_Request_Forgery</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/csrf-faq.html\" target=\"_blank\">http://www.cgisecurity.com/csrf-faq.html</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_request_forgery \" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_request_forgery </a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=csrf&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=csrf&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "133",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "param_location": "body",
+    "params": {
+      "txtName": "ZAP",
+      "mtxMessage": "",
+      "btnSign": "Sign Guestbook"
+    },
+    "scannable_params": [
+      "txtName",
+      "mtxMessage",
+      "btnSign"
+    ],
+    "parameters": [
+      {
+        "name": "txtName",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "mtxMessage",
+        "scan": true,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "btnSign",
+        "scan": true,
+        "sample_values": [
+          "Sign Guestbook"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+      "content-length": "46"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "txtName=ZAP&mtxMessage=&btnSign=Sign+Guestbook",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:22 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4967",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Stored Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Stored Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form method=\"post\" name=\"guestform\" \">\r\n\t\t\t<table width=\"550\" border=\"0\" cellpadding=\"2\" cellspacing=\"1\">\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Name *</td>\r\n\t\t\t\t\t<td><input name=\"txtName\" type=\"text\" size=\"30\" maxlength=\"10\"></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Message *</td>\r\n\t\t\t\t\t<td><textarea name=\"mtxMessage\" cols=\"50\" rows=\"3\" maxlength=\"50\"></textarea></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">&nbsp;</td>\r\n\t\t\t\t\t<td>\r\n\t\t\t\t\t\t<input name=\"btnSign\" type=\"submit\" value=\"Sign Guestbook\" onclick=\"return validateGuestbookForm(this.form);\" />\r\n\t\t\t\t\t\t<input name=\"btnClear\" type=\"submit\" value=\"Clear Guestbook\" onClick=\"return confirmClearGuestbook();\" />\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\n\r\n\t\t</form>\r\n\t\t\r\n\t</div>\r\n\t<br />\r\n\r\n\t<div id=\"guestbook_comments\">Name: ZAP<br />Message: <br /></div>\n\r\n\t<br />\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet\" target=\"_blank\">https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_scripting</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/xss-faq.html\" target=\"_blank\">http://www.cgisecurity.com/xss-faq.html</a></li>\r\n\t\t<li><a href=\"http://www.scriptalert1.com/\" target=\"_blank\">http://www.scriptalert1.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_s&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_s&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "134",
+    "method": "POST",
+    "url": "http://localhost:8080/security.php",
+    "base_url": "http://localhost:8080/security.php",
+    "param_location": "body",
+    "params": {
+      "security": "low",
+      "seclev_submit": "Submit",
+      "user_token": "bc09f3309673e8e019aa984fce34d773"
+    },
+    "scannable_params": [
+      "security",
+      "seclev_submit"
+    ],
+    "parameters": [
+      {
+        "name": "security",
+        "scan": true,
+        "sample_values": [
+          "low"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "seclev_submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "user_token",
+        "scan": false,
+        "sample_values": [
+          "bc09f3309673e8e019aa984fce34d773"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/security.php",
+      "content-length": "77"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "security=low&seclev_submit=Submit&user_token=bc09f3309673e8e019aa984fce34d773",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:22 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "set-cookie": "security=low",
+      "location": "/security.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "136",
+    "method": "POST",
+    "url": "http://localhost:8080/vulnerabilities/csp/",
+    "base_url": "http://localhost:8080/vulnerabilities/csp/",
+    "param_location": "body",
+    "params": {
+      "include": "ZAP"
+    },
+    "scannable_params": [
+      "include"
+    ],
+    "parameters": [
+      {
+        "name": "include",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/csp/",
+      "content-length": "11"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "include=ZAP",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:22 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "content-security-policy": "script-src 'self' https://pastebin.com  example.com code.jquery.com https://ssl.google-analytics.com ;",
+      "vary": "Accept-Encoding",
+      "content-length": "4252",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Content Security Policy (CSP) Bypass :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t<div class=\"body_padded\">\n\t<h1>Vulnerability: Content Security Policy (CSP) Bypass</h1>\n\n\t<div class=\"vulnerable_code_area\">\n\t<script src='ZAP'></script>\n\n<form name=\"csp\" method=\"POST\">\n\t<p>You can include scripts from external sources, examine the Content Security Policy and enter a URL to include here:</p>\n\t<input size=\"50\" type=\"text\" name=\"include\" value=\"\" id=\"include\" />\n\t<input type=\"submit\" value=\"Include\" />\n</form>\n\t</div>\n\t<h2>More Information</h2>\n\t<ul>\n\t\t<li><a href=\"https://content-security-policy.com/\" target=\"_blank\">Content Security Policy Reference</a></li>\n\t\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP\" target=\"_blank\">Mozilla Developer Network - CSP: script-src</a></li>\n\t\t<li><a href=\"https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/\" target=\"_blank\">Mozilla Security Blog - CSP for the web we have</a></li>\n\t</ul>\n\t<p><i>Module developed by <a href='https://twitter.com/digininja'>Digininja</a>.</i></p>\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=csp&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=csp&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "137",
+    "method": "GET",
+    "url": "http://localhost:8080/ids_log.php?clear_log=Clear+Log",
+    "base_url": "http://localhost:8080/ids_log.php",
+    "param_location": "query",
+    "params": {
+      "clear_log": "Clear Log"
+    },
+    "scannable_params": [
+      "clear_log"
+    ],
+    "parameters": [
+      {
+        "name": "clear_log",
+        "scan": true,
+        "sample_values": [
+          "Clear Log"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/ids_log.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:37:30 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "/ids_log.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  }
+]

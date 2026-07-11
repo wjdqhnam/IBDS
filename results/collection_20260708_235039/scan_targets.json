@@ -1,0 +1,83 @@
+[
+  {
+    "zap_message_id": "24",
+    "method": "POST",
+    "url": "http://localhost:8080/login.php",
+    "base_url": "http://localhost:8080/login.php",
+    "param_location": "body",
+    "params": {
+      "username": "ZAP",
+      "password": "ZAP",
+      "Login": "Login",
+      "user_token": "7e4c5139600f7aa6f21e00132b200fb4"
+    },
+    "scannable_params": [
+      "username",
+      "password",
+      "Login"
+    ],
+    "parameters": [
+      {
+        "name": "username",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "password",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Login",
+        "scan": true,
+        "sample_values": [
+          "Login"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "user_token",
+        "scan": false,
+        "sample_values": [
+          "7e4c5139600f7aa6f21e00132b200fb4"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "localhost:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/login.php",
+      "content-length": "81"
+    },
+    "cookies": {
+      "PHPSESSID": "97cb84fgdpp0cjbrb2ujgggf90",
+      "security": "low"
+    },
+    "request_body": "username=ZAP&password=ZAP&Login=Login&user_token=7e4c5139600f7aa6f21e00132b200fb4",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 14:50:42 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "login.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  }
+]

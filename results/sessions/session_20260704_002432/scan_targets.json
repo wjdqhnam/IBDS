@@ -1,0 +1,1079 @@
+[
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/setup.php",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "create_db",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Create / Reset Database"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "fbe578709f775470be0216aa1343425c"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "setup",
+      "state_changing_action"
+    ],
+    "skip_reason": "risk_tags: setup,state_changing_action",
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/instructions.php",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "doc",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          "readme",
+          "PDF",
+          "changelog",
+          "PHPIDS-license"
+        ],
+        "sources": [
+          "proxy"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "proxy"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "security_setting_change"
+    ],
+    "skip_reason": "risk_tags: security_setting_change",
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/instructions.php?doc=readme",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/instructions.php?doc=PDF",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/instructions.php?doc=changelog",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/instructions.php?doc=PHPIDS-license",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/exec/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "ip",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Submit",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/brute/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "username",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Login",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Login"
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/brute/?username=&password=&Login=Login",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/sqli/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "id",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Submit",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/sqli/?id=&Submit=Submit",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/captcha/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "step",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "1"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "password_new",
+        "request_location": "body",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password_conf",
+        "request_location": "body",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Change",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Change"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "account_modification"
+    ],
+    "skip_reason": "risk_tags: account_modification",
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/upload/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "parameters": [
+      {
+        "name": "MAX_FILE_SIZE",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "100000"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "uploaded",
+        "request_location": "body",
+        "field_type": "file",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "Upload",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Upload"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "file_upload"
+    ],
+    "skip_reason": "risk_tags: file_upload",
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/sqli_blind/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "id",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Submit",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/sqli_blind/?id=&Submit=Submit",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_r/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "name",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/xss_r/?name=",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_d/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "default",
+        "request_location": "query",
+        "field_type": "select",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/xss_d/?default=",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/javascript/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "phrase",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          "ChangeMe"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "send",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/fi/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "page",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          "include.php",
+          "file1.php",
+          "file2.php",
+          "file3.php"
+        ],
+        "sources": [
+          "proxy"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "proxy"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/fi/?page=include.php",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/fi/?page=file1.php",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/fi/?page=file2.php",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/fi/?page=file3.php",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "txtName",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "mtxMessage",
+        "request_location": "body",
+        "field_type": "textarea",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "btnSign",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Sign Guestbook"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "btnClear",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Clear Guestbook"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "state_changing_action"
+    ],
+    "skip_reason": "risk_tags: state_changing_action",
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/ids_log.php",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "clear_log",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Clear Log"
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "state_changing_action"
+    ],
+    "skip_reason": "risk_tags: state_changing_action",
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/ids_log.php?clear_log=Clear+Log",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/security.php",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "security",
+        "request_location": "body",
+        "field_type": "select",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "seclev_submit",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "232a20f0c1efea954c908994e7094d50",
+          "a6bde31ae70b49f9d92eea77bc7e755b",
+          "eefb8235014e9549c170fed5ba020850"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/csp/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "include",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/security.php",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "phpids",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          "on",
+          "off"
+        ],
+        "sources": [
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "test",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          "\"><script>eval(window.name)</script>"
+        ],
+        "sources": [
+          "proxy"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "proxy"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "security_setting_change"
+    ],
+    "skip_reason": "risk_tags: security_setting_change",
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/security.php?phpids=on",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/security.php?test=%22%3E%3Cscript%3Eeval(window.name)%3C/script%3E",
+        "method": "GET"
+      },
+      {
+        "full_url": "http://localhost:8080/security.php?phpids=off",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "member",
+    "base_url": "http://localhost:8080/vulnerabilities/csrf/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "password_new",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password_conf",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Change",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Change"
+        ],
+        "sources": [
+          "crawl",
+          "proxy"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {
+      "PHPSESSID": "qddtf0qprbesei0e28o24pcgp5",
+      "security": "low"
+    },
+    "headers": {
+      "Host": "localhost:8080",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept-Encoding": "gzip, deflate, br, zstd",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+      "Connection": "keep-alive",
+      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "Cookie": "PHPSESSID=qddtf0qprbesei0e28o24pcgp5; PHPSESSID=qddtf0qprbesei0e28o24pcgp5; security=low"
+    },
+    "sources": [
+      "crawl",
+      "proxy"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "account_modification"
+    ],
+    "skip_reason": "risk_tags: account_modification",
+    "seen_requests": [
+      {
+        "full_url": "http://localhost:8080/vulnerabilities/csrf/?password_new=&password_conf=&Change=Change",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/login.php",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "username",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password",
+        "request_location": "body",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Login",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Login"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "7ea053c7ecc56899da27edd3b17ada3d"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  }
+]

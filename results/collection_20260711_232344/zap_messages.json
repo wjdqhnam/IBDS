@@ -1,0 +1,309 @@
+[
+  {
+    "note": "",
+    "rtt": "5",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=48lgnhlv4grcibrvbcsgi030i6; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:45 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080 HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=48lgnhlv4grcibrvbcsgi030i6; security=low\r\n\r\n",
+    "id": "1",
+    "type": "15",
+    "timestamp": "1783779825078",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "0",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=48lgnhlv4grcibrvbcsgi030i6; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.0 0\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080 HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=48lgnhlv4grcibrvbcsgi030i6; security=low\r\n\r\n",
+    "id": "2",
+    "type": "0",
+    "timestamp": "0",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/login.css\" />\r\n\r\n\t</head>\r\n\r\n\t<body>\r\n\r\n\t<div id=\"wrapper\">\r\n\r\n\t<div id=\"header\">\r\n\r\n\t<br />\r\n\r\n\t<p><img src=\"dvwa/images/login_logo.png\" /></p>\r\n\r\n\t<br />\r\n\r\n\t</div> <!--<div id=\"header\">-->\r\n\r\n\t<div id=\"content\">\r\n\r\n\t<form action=\"login.php\" method=\"post\">\r\n\r\n\t<fieldset>\r\n\r\n\t\t\t<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />\r\n\r\n\r\n\t\t\t<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />\r\n\r\n\t\t\t<br />\r\n\r\n\t\t\t<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>\r\n\r\n\t</fieldset>\r\n\r\n\t<input type='hidden' name='user_token' value='110f2bbb7e6fb2e4c2ec10fad45a1b7d' />\r\n\r\n\t</form>\r\n\r\n\t<br />\r\n\r\n\t\r\n\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\r\n\t<!-- <img src=\"dvwa/images/RandomStorm.png\" /> -->\r\n\t</div > <!--<div id=\"content\">-->\r\n\r\n\t<div id=\"footer\">\r\n\r\n\t<p><a href=\"http://www.dvwa.co.uk/\" target=\"_blank\">Damn Vulnerable Web Application (DVWA)</a></p>\r\n\r\n\t</div> <!--<div id=\"footer\"> -->\r\n\r\n\t</div> <!--<div id=\"wrapper\"> -->\r\n\r\n\t</body>\r\n\r\n</html>",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:45 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nSet-Cookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/\r\nExpires: Tue, 23 Jun 2009 12:00:00 GMT\r\nCache-Control: no-cache, must-revalidate\r\nPragma: no-cache\r\nSet-Cookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/\r\nSet-Cookie: security=low\r\nVary: Accept-Encoding\r\nContent-Length: 1523\r\nContent-Type: text/html;charset=utf-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\n\r\n",
+    "id": "3",
+    "type": "11",
+    "timestamp": "1783779825088",
+    "tags": [
+      "Authentication"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low",
+    "requestBody": "username=admin&password=password&Login=Login",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:45 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "POST http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\ncontent-type: application/x-www-form-urlencoded; charset=utf-8\r\ncontent-length: 44\r\nCookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low\r\n\r\n",
+    "id": "4",
+    "type": "11",
+    "timestamp": "1783779825091",
+    "tags": [
+      "Authentication"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/login.css\" />\r\n\r\n\t</head>\r\n\r\n\t<body>\r\n\r\n\t<div id=\"wrapper\">\r\n\r\n\t<div id=\"header\">\r\n\r\n\t<br />\r\n\r\n\t<p><img src=\"dvwa/images/login_logo.png\" /></p>\r\n\r\n\t<br />\r\n\r\n\t</div> <!--<div id=\"header\">-->\r\n\r\n\t<div id=\"content\">\r\n\r\n\t<form action=\"login.php\" method=\"post\">\r\n\r\n\t<fieldset>\r\n\r\n\t\t\t<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />\r\n\r\n\r\n\t\t\t<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />\r\n\r\n\t\t\t<br />\r\n\r\n\t\t\t<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>\r\n\r\n\t</fieldset>\r\n\r\n\t<input type='hidden' name='user_token' value='834176429ce4f7517625e8fa47e62bfc' />\r\n\r\n\t</form>\r\n\r\n\t<br />\r\n\r\n\t<div class=\"message\">CSRF token is incorrect</div>\r\n\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\r\n\t<!-- <img src=\"dvwa/images/RandomStorm.png\" /> -->\r\n\t</div > <!--<div id=\"content\">-->\r\n\r\n\t<div id=\"footer\">\r\n\r\n\t<p><a href=\"http://www.dvwa.co.uk/\" target=\"_blank\">Damn Vulnerable Web Application (DVWA)</a></p>\r\n\r\n\t</div> <!--<div id=\"footer\"> -->\r\n\r\n\t</div> <!--<div id=\"wrapper\"> -->\r\n\r\n\t</body>\r\n\r\n</html>",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:45 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Tue, 23 Jun 2009 12:00:00 GMT\r\nCache-Control: no-cache, must-revalidate\r\nPragma: no-cache\r\nVary: Accept-Encoding\r\nContent-Length: 1573\r\nContent-Type: text/html;charset=utf-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low\r\n\r\n",
+    "id": "5",
+    "type": "15",
+    "timestamp": "1783779825094",
+    "tags": [
+      "AntiCSRF",
+      "Comment",
+      "Form",
+      "Hidden",
+      "Password"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/login.css\" />\r\n\r\n\t</head>\r\n\r\n\t<body>\r\n\r\n\t<div id=\"wrapper\">\r\n\r\n\t<div id=\"header\">\r\n\r\n\t<br />\r\n\r\n\t<p><img src=\"dvwa/images/login_logo.png\" /></p>\r\n\r\n\t<br />\r\n\r\n\t</div> <!--<div id=\"header\">-->\r\n\r\n\t<div id=\"content\">\r\n\r\n\t<form action=\"login.php\" method=\"post\">\r\n\r\n\t<fieldset>\r\n\r\n\t\t\t<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />\r\n\r\n\r\n\t\t\t<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />\r\n\r\n\t\t\t<br />\r\n\r\n\t\t\t<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>\r\n\r\n\t</fieldset>\r\n\r\n\t<input type='hidden' name='user_token' value='110f2bbb7e6fb2e4c2ec10fad45a1b7d' />\r\n\r\n\t</form>\r\n\r\n\t<br />\r\n\r\n\t\r\n\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\r\n\t<!-- <img src=\"dvwa/images/RandomStorm.png\" /> -->\r\n\t</div > <!--<div id=\"content\">-->\r\n\r\n\t<div id=\"footer\">\r\n\r\n\t<p><a href=\"http://www.dvwa.co.uk/\" target=\"_blank\">Damn Vulnerable Web Application (DVWA)</a></p>\r\n\r\n\t</div> <!--<div id=\"footer\"> -->\r\n\r\n\t</div> <!--<div id=\"wrapper\"> -->\r\n\r\n\t</body>\r\n\r\n</html>",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:45 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nSet-Cookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/\r\nExpires: Tue, 23 Jun 2009 12:00:00 GMT\r\nCache-Control: no-cache, must-revalidate\r\nPragma: no-cache\r\nSet-Cookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; path=/\r\nSet-Cookie: security=low\r\nVary: Accept-Encoding\r\nContent-Length: 1523\r\nContent-Type: text/html;charset=utf-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\n\r\n",
+    "id": "6",
+    "type": "15",
+    "timestamp": "1783779825088",
+    "tags": [
+      "AntiCSRF",
+      "Comment",
+      "Form",
+      "Hidden",
+      "Password",
+      "SetCookie"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low",
+    "requestBody": "username=admin&password=password&Login=Login",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:45 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "POST http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\ncontent-type: application/x-www-form-urlencoded; charset=utf-8\r\ncontent-length: 44\r\nCookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low\r\n\r\n",
+    "id": "7",
+    "type": "15",
+    "timestamp": "1783779825091",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "4",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080 HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low\r\n\r\n",
+    "id": "12",
+    "type": "2",
+    "timestamp": "1783779827172",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "4",
+    "responseBody": "User-agent: *\r\nDisallow: /",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nLast-Modified: Fri, 12 Oct 2018 17:44:28 GMT\r\nETag: \"1a-5780ba3955700\"\r\nAccept-Ranges: bytes\r\nContent-Length: 26\r\nContent-Type: text/plain\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/robots.txt HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low\r\n\r\n",
+    "id": "13",
+    "type": "2",
+    "timestamp": "1783779827172",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "4",
+    "responseBody": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /sitemap.xml was not found on this server.</p>\n<hr>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n",
+    "cookieParams": "PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 404 Not Found\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nContent-Length: 297\r\nContent-Type: text/html; charset=iso-8859-1\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/sitemap.xml HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=uhkuoj7k19b8ojv4tfo2gbf2v1; security=low\r\n\r\n",
+    "id": "14",
+    "type": "2",
+    "timestamp": "1783779827172",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "3",
+    "responseBody": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/login.css\" />\r\n\r\n\t</head>\r\n\r\n\t<body>\r\n\r\n\t<div id=\"wrapper\">\r\n\r\n\t<div id=\"header\">\r\n\r\n\t<br />\r\n\r\n\t<p><img src=\"dvwa/images/login_logo.png\" /></p>\r\n\r\n\t<br />\r\n\r\n\t</div> <!--<div id=\"header\">-->\r\n\r\n\t<div id=\"content\">\r\n\r\n\t<form action=\"login.php\" method=\"post\">\r\n\r\n\t<fieldset>\r\n\r\n\t\t\t<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />\r\n\r\n\r\n\t\t\t<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />\r\n\r\n\t\t\t<br />\r\n\r\n\t\t\t<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>\r\n\r\n\t</fieldset>\r\n\r\n\t<input type='hidden' name='user_token' value='04ad4bf744ba404b232b6152b4986205' />\r\n\r\n\t</form>\r\n\r\n\t<br />\r\n\r\n\t\r\n\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\r\n\t<!-- <img src=\"dvwa/images/RandomStorm.png\" /> -->\r\n\t</div > <!--<div id=\"content\">-->\r\n\r\n\t<div id=\"footer\">\r\n\r\n\t<p><a href=\"http://www.dvwa.co.uk/\" target=\"_blank\">Damn Vulnerable Web Application (DVWA)</a></p>\r\n\r\n\t</div> <!--<div id=\"footer\"> -->\r\n\r\n\t</div> <!--<div id=\"wrapper\"> -->\r\n\r\n\t</body>\r\n\r\n</html>",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nSet-Cookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/\r\nExpires: Tue, 23 Jun 2009 12:00:00 GMT\r\nCache-Control: no-cache, must-revalidate\r\nPragma: no-cache\r\nSet-Cookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/\r\nSet-Cookie: security=low\r\nVary: Accept-Encoding\r\nContent-Length: 1523\r\nContent-Type: text/html;charset=utf-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\n\r\n",
+    "id": "16",
+    "type": "11",
+    "timestamp": "1783779827178",
+    "tags": [
+      "Authentication"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "username=admin&password=password&Login=Login",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "POST http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\ncontent-type: application/x-www-form-urlencoded; charset=utf-8\r\ncontent-length: 44\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "17",
+    "type": "11",
+    "timestamp": "1783779827182",
+    "tags": [
+      "Authentication"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "1",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/ HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nreferer: http://host.docker.internal:8080/robots.txt\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "18",
+    "type": "2",
+    "timestamp": "1783779827185",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/login.css\" />\r\n\r\n\t</head>\r\n\r\n\t<body>\r\n\r\n\t<div id=\"wrapper\">\r\n\r\n\t<div id=\"header\">\r\n\r\n\t<br />\r\n\r\n\t<p><img src=\"dvwa/images/login_logo.png\" /></p>\r\n\r\n\t<br />\r\n\r\n\t</div> <!--<div id=\"header\">-->\r\n\r\n\t<div id=\"content\">\r\n\r\n\t<form action=\"login.php\" method=\"post\">\r\n\r\n\t<fieldset>\r\n\r\n\t\t\t<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />\r\n\r\n\r\n\t\t\t<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />\r\n\r\n\t\t\t<br />\r\n\r\n\t\t\t<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>\r\n\r\n\t</fieldset>\r\n\r\n\t<input type='hidden' name='user_token' value='8501b296a5b7557f603b8ee7005ad953' />\r\n\r\n\t</form>\r\n\r\n\t<br />\r\n\r\n\t<div class=\"message\">CSRF token is incorrect</div>\r\n\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\r\n\t<!-- <img src=\"dvwa/images/RandomStorm.png\" /> -->\r\n\t</div > <!--<div id=\"content\">-->\r\n\r\n\t<div id=\"footer\">\r\n\r\n\t<p><a href=\"http://www.dvwa.co.uk/\" target=\"_blank\">Damn Vulnerable Web Application (DVWA)</a></p>\r\n\r\n\t</div> <!--<div id=\"footer\"> -->\r\n\r\n\t</div> <!--<div id=\"wrapper\"> -->\r\n\r\n\t</body>\r\n\r\n</html>",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Tue, 23 Jun 2009 12:00:00 GMT\r\nCache-Control: no-cache, must-revalidate\r\nPragma: no-cache\r\nVary: Accept-Encoding\r\nContent-Length: 1573\r\nContent-Type: text/html;charset=utf-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "19",
+    "type": "2",
+    "timestamp": "1783779827185",
+    "tags": [
+      "AntiCSRF",
+      "Comment",
+      "Form",
+      "Hidden",
+      "Password"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "1",
+    "responseBody": "body {\r\n\tbackground: #fefffe;\r\n\tfont: 12px/15px Arial, Helvetica, sans-serif;\r\n\tline-height: 20px;\r\n\tcolor: #6b6b6b;\r\n}\r\n\r\n#wrapper {\r\n\ttext-align: center;\r\n\tmargin: 0 auto;\r\n}\r\n\r\n#content {\r\n\tdisplay: inline-block;\r\n\tpadding: 20px;\r\n\twidth: auto;\r\n}\r\n\r\n#footer {\r\n\tposition: absolute;\r\n\twidth: 100%;\r\n\theight: 50px;\r\n\tbottom: 0px;\r\n\tleft: 0px;\r\n}\r\n\r\nlabel {\r\n\tfloat: left;\r\n\ttext-align: right;\r\n\tmargin-right: 0.5em;\r\n\tdisplay: block;\r\n\toverflow: hidden;\r\n\tpadding-right: 50px;\r\n\tfont-weight: bold;\r\n}\r\n\r\n.loginInput {\r\n\tfloat: left;\r\n\tcolor: #6B6B6B;\r\n\twidth: 320px;\r\n\tbackground-color: #F4F4F4;\r\n\tborder: 1px;\r\n\tborder-style: solid;\r\n\tborder-color: #c4c4c4;\r\n\tpadding: 6px;\r\n\tmargin-bottom: 12px;\r\n}\r\n\r\nfieldset {\r\n\twidth: 350px;\r\n\tpadding: 10px 20px 10px 20px;\r\n\toverflow: hidden;\r\n\tborder-style: none;\r\n}\r\n\r\np {\r\n\tfont-size: 10px;\r\n}\r\n\r\n",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nLast-Modified: Fri, 12 Oct 2018 17:44:28 GMT\r\nETag: \"34a-5780ba3955700\"\r\nAccept-Ranges: bytes\r\nContent-Length: 842\r\nVary: Accept-Encoding\r\nContent-Type: text/css\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/dvwa/css/login.css HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nreferer: http://host.docker.internal:8080/login.php\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "24",
+    "type": "2",
+    "timestamp": "1783779827189",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "0",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.0 0\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/dvwa HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nreferer: http://host.docker.internal:8080/login.php\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "25",
+    "type": "0",
+    "timestamp": "0",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "0",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.0 0\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/dvwa/css HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nreferer: http://host.docker.internal:8080/login.php\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "26",
+    "type": "0",
+    "timestamp": "0",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "0",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=47dfhu11hu62ps1rke6bc88886",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.0 0\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/dvwa/images HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\nreferer: http://host.docker.internal:8080/login.php\r\ncookie: PHPSESSID=47dfhu11hu62ps1rke6bc88886\r\n\r\n",
+    "id": "28",
+    "type": "0",
+    "timestamp": "0",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "username=ZAP&password=ZAP&Login=Login&user_token=8501b296a5b7557f603b8ee7005ad953",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "POST http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\ncontent-type: application/x-www-form-urlencoded\r\nreferer: http://host.docker.internal:8080/login.php\r\ncontent-length: 81\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "30",
+    "type": "2",
+    "timestamp": "1783779827191",
+    "tags": []
+  },
+  {
+    "note": "",
+    "rtt": "3",
+    "responseBody": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/login.css\" />\r\n\r\n\t</head>\r\n\r\n\t<body>\r\n\r\n\t<div id=\"wrapper\">\r\n\r\n\t<div id=\"header\">\r\n\r\n\t<br />\r\n\r\n\t<p><img src=\"dvwa/images/login_logo.png\" /></p>\r\n\r\n\t<br />\r\n\r\n\t</div> <!--<div id=\"header\">-->\r\n\r\n\t<div id=\"content\">\r\n\r\n\t<form action=\"login.php\" method=\"post\">\r\n\r\n\t<fieldset>\r\n\r\n\t\t\t<label for=\"user\">Username</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />\r\n\r\n\r\n\t\t\t<label for=\"pass\">Password</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />\r\n\r\n\t\t\t<br />\r\n\r\n\t\t\t<p class=\"submit\"><input type=\"submit\" value=\"Login\" name=\"Login\"></p>\r\n\r\n\t</fieldset>\r\n\r\n\t<input type='hidden' name='user_token' value='04ad4bf744ba404b232b6152b4986205' />\r\n\r\n\t</form>\r\n\r\n\t<br />\r\n\r\n\t\r\n\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\t<br />\r\n\r\n\t<!-- <img src=\"dvwa/images/RandomStorm.png\" /> -->\r\n\t</div > <!--<div id=\"content\">-->\r\n\r\n\t<div id=\"footer\">\r\n\r\n\t<p><a href=\"http://www.dvwa.co.uk/\" target=\"_blank\">Damn Vulnerable Web Application (DVWA)</a></p>\r\n\r\n\t</div> <!--<div id=\"footer\"> -->\r\n\r\n\t</div> <!--<div id=\"wrapper\"> -->\r\n\r\n\t</body>\r\n\r\n</html>",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/security=low",
+    "requestBody": "",
+    "responseHeader": "HTTP/1.1 200 OK\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nSet-Cookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/\r\nExpires: Tue, 23 Jun 2009 12:00:00 GMT\r\nCache-Control: no-cache, must-revalidate\r\nPragma: no-cache\r\nSet-Cookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; path=/\r\nSet-Cookie: security=low\r\nVary: Accept-Encoding\r\nContent-Length: 1523\r\nContent-Type: text/html;charset=utf-8\r\n\r\n",
+    "requestHeader": "GET http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\n\r\n",
+    "id": "31",
+    "type": "15",
+    "timestamp": "1783779827178",
+    "tags": [
+      "AntiCSRF",
+      "Comment",
+      "Form",
+      "Hidden",
+      "Password",
+      "SetCookie"
+    ]
+  },
+  {
+    "note": "",
+    "rtt": "2",
+    "responseBody": "",
+    "cookieParams": "PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low",
+    "requestBody": "username=admin&password=password&Login=Login",
+    "responseHeader": "HTTP/1.1 302 Found\r\nDate: Sat, 11 Jul 2026 14:23:47 GMT\r\nServer: Apache/2.4.25 (Debian)\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nLocation: login.php\r\nContent-Length: 0\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n",
+    "requestHeader": "POST http://host.docker.internal:8080/login.php HTTP/1.1\r\nhost: host.docker.internal:8080\r\nuser-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\r\npragma: no-cache\r\ncache-control: no-cache\r\ncontent-type: application/x-www-form-urlencoded; charset=utf-8\r\ncontent-length: 44\r\nCookie: PHPSESSID=m78i8nk6f4eep42ttlu33097o2; security=low\r\n\r\n",
+    "id": "32",
+    "type": "15",
+    "timestamp": "1783779827182",
+    "tags": []
+  }
+]

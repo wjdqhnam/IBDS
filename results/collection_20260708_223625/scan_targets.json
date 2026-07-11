@@ -1,0 +1,1167 @@
+[
+  {
+    "zap_message_id": "31",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/fi/?page=include.php",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/fi/",
+    "param_location": "query",
+    "params": {
+      "page": "include.php"
+    },
+    "scannable_params": [
+      "page"
+    ],
+    "parameters": [
+      {
+        "name": "page",
+        "scan": true,
+        "sample_values": [
+          "include.php"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "3947",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: File Inclusion :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: File Inclusion</h1>\r\n\r\n\t<div class=\"warning\">The PHP function <em>allow_url_include</em> is not enabled.</div>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t[<em><a href=\"?page=file1.php\">file1.php</a></em>] - [<em><a href=\"?page=file2.php\">file2.php</a></em>] - [<em><a href=\"?page=file3.php\">file3.php</a></em>]\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Remote_File_Inclusion\" target=\"_blank\">https://en.wikipedia.org/wiki/Remote_File_Inclusion</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Top_10_2007-A3\" target=\"_blank\">https://www.owasp.org/index.php/Top_10_2007-A3</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=fi&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=fi&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "71",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/instructions.php?doc=copying",
+    "base_url": "http://host.docker.internal:8080/instructions.php",
+    "param_location": "query",
+    "params": {
+      "doc": "copying"
+    },
+    "scannable_params": [
+      "doc"
+    ],
+    "parameters": [
+      {
+        "name": "doc",
+        "scan": true,
+        "sample_values": [
+          "copying"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/instructions.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-type": "text/html;charset=utf-8",
+      "content-length": "40145"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Instructions :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\".\">Home</a></li>\n<li class=\"selected\"><a href=\"instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Instructions</h1>\r\n\r\n\t<div class=\"submenu\"><span class=\"submenu_item\"><a href=\"?doc=readme\">Read Me</a></span><span class=\"submenu_item\"><a href=\"?doc=PDF\">PDF Guide</a></span><span class=\"submenu_item\"><a href=\"?doc=changelog\">Change Log</a></span><span class=\"submenu_item selected\"><a href=\"?doc=copying\">Copying</a></span><span class=\"submenu_item\"><a href=\"?doc=PHPIDS-license\">PHPIDS License</a></span></div>\r\n\r\n\t<span class=\"fixed\">\r\n\t\t                    GNU GENERAL PUBLIC LICENSE<br />\r\n                       Version 3, 29 June 2007<br />\r\n<br />\r\n Copyright (C) 2007 Free Software Foundation, Inc. <<a href=\"http://fsf.org/\" target=\"_blank\">http://fsf.org/</a>><br />\r\n Everyone is permitted to copy and distribute verbatim copies<br />\r\n of this license document, but changing it is not allowed.<br />\r\n<br />\r\n                            Preamble<br />\r\n<br />\r\n  The GNU General Public License is a free, copyleft license for<br />\r\nsoftware and other kinds of works.<br />\r\n<br />\r\n  The licenses for most software and other practical works are designed<br />\r\nto take away your freedom to share and change the works.  By contrast,<br />\r\nthe GNU General Public License is intended to guarantee your freedom to<br />\r\nshare and change all versions of a program--to make sure it remains free<br />\r\nsoftware for all its users.  We, the Free Software Foundation, use the<br />\r\nGNU General Public License for most of our software; it applies also to<br />\r\nany other work released this way by its authors.  You can apply it to<br />\r\nyour programs, too.<br />\r\n<br />\r\n  When we speak of free software, we are referring to freedom, not<br />\r\nprice.  Our General Public Licenses are designed to make sure that you<br />\r\nhave the freedom to distribute copies of free software (and charge for<br />\r\nthem if you wish), that you receive source code or can get it if you<br />\r\nwant it, that you can change the software or use pieces of it in new<br />\r\nfree programs, and that you know you can do these things.<br />\r\n<br />\r\n  To protect your rights, we need to prevent others from denying you<br />\r\nthese rights or asking you to surrender the rights.  Therefore, you have<br />\r\ncertain responsibilities if you distribute copies of the software, or if<br />\r\nyou modify it: responsibilities to respect the freedom of others.<br />\r\n<br />\r\n  For example, if you distribute copies of such a program, whether<br />\r\ngratis or for a fee, you must pass on to the recipients the same<br />\r\nfreedoms that you received.  You must make sure that they, too, receive<br />\r\nor can get the source code.  And you must show them these terms so they<br />\r\nknow their rights.<br />\r\n<br />\r\n  Developers that use the GNU GPL protect your rights with two steps:<br />\r\n(1) assert copyright on the software, and (2) offer you this License<br />\r\ngiving you legal permission to copy, distribute and/or modify it.<br />\r\n<br />\r\n  For the developers' and authors' protection, the GPL clearly explains<br />\r\nthat there is no warranty for this free software.  For both users' and<br />\r\nauthors' sake, the GPL requires that modified versions be marked as<br />\r\nchanged, so that their problems will not be attributed erroneously to<br />\r\nauthors of previous versions.<br />\r\n<br />\r\n  Some devices are designed to deny users access to install or run<br />\r\nmodified versions of the software inside them, although the manufacturer<br />\r\ncan do so.  This is fundamentally incompatible with the aim of<br />\r\nprotecting users' freedom to change the software.  The systematic<br />\r\npattern of such abuse occurs in the area of products for individuals to<br />\r\nuse, which is precisely where it is most unacceptable.  Therefore, we<br />\r\nhave designed this version of the GPL to prohibit the practice for those<br />\r\nproducts.  If such problems arise substantially in other domains, we<br />\r\nstand ready to extend this provision to those domains in future versions<br />\r\nof the GPL, as needed to protect the freedom of users.<br />\r\n<br />\r\n  Finally, every program is threatened constantly by software patents.<br />\r\nStates should not allow patents to restrict development and use of<br />\r\nsoftware on general-purpose computers, but in those that do, we wish to<br />\r\navoid the special danger that patents applied to a free program could<br />\r\nmake it effectively proprietary.  To prevent this, the GPL assures that<br />\r\npatents cannot be used to render the program non-free.<br />\r\n<br />\r\n  The precise terms and conditions for copying, distribution and<br />\r\nmodification follow.<br />\r\n<br />\r\n                       TERMS AND CONDITIONS<br />\r\n<br />\r\n  0. Definitions.<br />\r\n<br />\r\n  \"This License\" refers to version 3 of the GNU General Public License.<br />\r\n<br />\r\n  \"Copyright\" also means copyright-like laws that apply to other kinds of<br />\r\nworks, such as semiconductor masks.<br />\r\n<br />\r\n  \"The Program\" refers to any copyrightable work licensed under this<br />\r\nLicense.  Each licensee is addressed as \"you\".  \"Licensees\" and<br />\r\n\"recipients\" may be individuals or organizations.<br />\r\n<br />\r\n  To \"modify\" a work means to copy from or adapt all or part of the work<br />\r\nin a fashion requiring copyright permission, other than the making of an<br />\r\nexact copy.  The resulting work is called a \"modified version\" of the<br />\r\nearlier work or a work \"based on\" the earlier work.<br />\r\n<br />\r\n  A \"covered work\" means either the unmodified Program or a work based<br />\r\non the Program.<br />\r\n<br />\r\n  To \"propagate\" a work means to do anything with it that, without<br />\r\npermission, would make you directly or secondarily liable for<br />\r\ninfringement under applicable copyright law, except executing it on a<br />\r\ncomputer or modifying a private copy.  Propagation includes copying,<br />\r\ndistribution (with or without modification), making available to the<br />\r\npublic, and in some countries other activities as well.<br />\r\n<br />\r\n  To \"convey\" a work means any kind of propagation that enables other<br />\r\nparties to make or receive copies.  Mere interaction with a user through<br />\r\na computer network, with no transfer of a copy, is not conveying.<br />\r\n<br />\r\n  An interactive user interface displays \"Appropriate Legal Notices\"<br />\r\nto the extent that it includes a convenient and prominently visible<br />\r\nfeature that (1) displays an appropriate copyright notice, and (2)<br />\r\ntells the user that there is no warranty for the work (except to the<br />\r\nextent that warranties are provided), that licensees may convey the<br />\r\nwork under this License, and how to view a copy of this License.  If<br />\r\nthe interface presents a list of user commands or options, such as a<br />\r\nmenu, a prominent item in the list meets this criterion.<br />\r\n<br />\r\n  1. Source Code.<br />\r\n<br />\r\n  The \"source code\" for a work means the preferred form of the work<br />\r\nfor making modifications to it.  \"Object code\" means any non-source<br />\r\nform of a work.<br />\r\n<br />\r\n  A \"Standard Interface\" means an interface that either is an official<br />\r\nstandard defined by a recognized standards body, or, in the case of<br />\r\ninterfaces specified for a particular programming language, one that<br />\r\nis widely used among developers working in that language.<br />\r\n<br />\r\n  The \"System Libraries\" of an executable work include anything, other<br />\r\nthan the work as a whole, that (a) is included in the normal form of<br />\r\npackaging a Major Component, but which is not part of that Major<br />\r\nComponent, and (b) serves only to enable use of the work with that<br />\r\nMajor Component, or to implement a Standard Interface for which an<br />\r\nimplementation is available to the public in source code form.  A<br />\r\n\"Major Component\", in this context, means a major essential component<br />\r\n(kernel, window system, and so on) of the specific operating system<br />\r\n(if any) on which the executable work runs, or a compiler used to<br />\r\nproduce the work, or an object code interpreter used to run it.<br />\r\n<br />\r\n  The \"Corresponding Source\" for a work in object code form means all<br />\r\nthe source code needed to generate, install, and (for an executable<br />\r\nwork) run the object code and to modify the work, including scripts to<br />\r\ncontrol those activities.  However, it does not include the work's<br />\r\nSystem Libraries, or general-purpose tools or generally available free<br />\r\nprograms which are used unmodified in performing those activities but<br />\r\nwhich are not part of the work.  For example, Corresponding Source<br />\r\nincludes interface definition files associated with source files for<br />\r\nthe work, and the source code for shared libraries and dynamically<br />\r\nlinked subprograms that the work is specifically designed to require,<br />\r\nsuch as by intimate data communication or control flow between those<br />\r\nsubprograms and other parts of the work.<br />\r\n<br />\r\n  The Corresponding Source need not include anything that users<br />\r\ncan regenerate automatically from other parts of the Corresponding<br />\r\nSource.<br />\r\n<br />\r\n  The Corresponding Source for a work in source code form is that<br />\r\nsame work.<br />\r\n<br />\r\n  2. Basic Permissions.<br />\r\n<br />\r\n  All rights granted under this License are granted for the term of<br />\r\ncopyright on the Program, and are irrevocable provided the stated<br />\r\nconditions are met.  This License explicitly affirms your unlimited<br />\r\npermission to run the unmodified Program.  The output from running a<br />\r\ncovered work is covered by this License only if the output, given its<br />\r\ncontent, constitutes a covered work.  This License acknowledges your<br />\r\nrights of fair use or other equivalent, as provided by copyright law.<br />\r\n<br />\r\n  You may make, run and propagate covered works that you do not<br />\r\nconvey, without conditions so long as your license otherwise remains<br />\r\nin force.  You may convey covered works to others for the sole purpose<br />\r\nof having them make modifications exclusively for you, or provide you<br />\r\nwith facilities for running those works, provided that you comply with<br />\r\nthe terms of this License in conveying all material for which you do<br />\r\nnot control copyright.  Those thus making or running the covered works<br />\r\nfor you must do so exclusively on your behalf, under your direction<br />\r\nand control, on terms that prohibit them from making any copies of<br />\r\nyour copyrighted material outside their relationship with you.<br />\r\n<br />\r\n  Conveying under any other circumstances is permitted solely under<br />\r\nthe conditions stated below.  Sublicensing is not allowed; section 10<br />\r\nmakes it unnecessary.<br />\r\n<br />\r\n  3. Protecting Users' Legal Rights From Anti-Circumvention Law.<br />\r\n<br />\r\n  No covered work shall be deemed part of an effective technological<br />\r\nmeasure under any applicable law fulfilling obligations under article<br />\r\n11 of the WIPO copyright treaty adopted on 20 December 1996, or<br />\r\nsimilar laws prohibiting or restricting circumvention of such<br />\r\nmeasures.<br />\r\n<br />\r\n  When you convey a covered work, you waive any legal power to forbid<br />\r\ncircumvention of technological measures to the extent such circumvention<br />\r\nis effected by exercising rights under this License with respect to<br />\r\nthe covered work, and you disclaim any intention to limit operation or<br />\r\nmodification of the work as a means of enforcing, against the work's<br />\r\nusers, your or third parties' legal rights to forbid circumvention of<br />\r\ntechnological measures.<br />\r\n<br />\r\n  4. Conveying Verbatim Copies.<br />\r\n<br />\r\n  You may convey verbatim copies of the Program's source code as you<br />\r\nreceive it, in any medium, provided that you conspicuously and<br />\r\nappropriately publish on each copy an appropriate copyright notice;<br />\r\nkeep intact all notices stating that this License and any<br />\r\nnon-permissive terms added in accord with section 7 apply to the code;<br />\r\nkeep intact all notices of the absence of any warranty; and give all<br />\r\nrecipients a copy of this License along with the Program.<br />\r\n<br />\r\n  You may charge any price or no price for each copy that you convey,<br />\r\nand you may offer support or warranty protection for a fee.<br />\r\n<br />\r\n  5. Conveying Modified Source Versions.<br />\r\n<br />\r\n  You may convey a work based on the Program, or the modifications to<br />\r\nproduce it from the Program, in the form of source code under the<br />\r\nterms of section 4, provided that you also meet all of these conditions:<br />\r\n<br />\r\n    a) The work must carry prominent notices stating that you modified<br />\r\n    it, and giving a relevant date.<br />\r\n<br />\r\n    b) The work must carry prominent notices stating that it is<br />\r\n    released under this License and any conditions added under section<br />\r\n    7.  This requirement modifies the requirement in section 4 to<br />\r\n    \"keep intact all notices\".<br />\r\n<br />\r\n    c) You must license the entire work, as a whole, under this<br />\r\n    License to anyone who comes into possession of a copy.  This<br />\r\n    License will therefore apply, along with any applicable section 7<br />\r\n    additional terms, to the whole of the work, and all its parts,<br />\r\n    regardless of how they are packaged.  This License gives no<br />\r\n    permission to license the work in any other way, but it does not<br />\r\n    invalidate such permission if you have separately received it.<br />\r\n<br />\r\n    d) If the work has interactive user interfaces, each must display<br />\r\n    Appropriate Legal Notices; however, if the Program has interactive<br />\r\n    interfaces that do not display Appropriate Legal Notices, your<br />\r\n    work need not make them do so.<br />\r\n<br />\r\n  A compilation of a covered work with other separate and independent<br />\r\nworks, which are not by their nature extensions of the covered work,<br />\r\nand which are not combined with it such as to form a larger program,<br />\r\nin or on a volume of a storage or distribution medium, is called an<br />\r\n\"aggregate\" if the compilation and its resulting copyright are not<br />\r\nused to limit the access or legal rights of the compilation's users<br />\r\nbeyond what the individual works permit.  Inclusion of a covered work<br />\r\nin an aggregate does not cause this License to apply to the other<br />\r\nparts of the aggregate.<br />\r\n<br />\r\n  6. Conveying Non-Source Forms.<br />\r\n<br />\r\n  You may convey a covered work in object code form under the terms<br />\r\nof sections 4 and 5, provided that you also convey the<br />\r\nmachine-readable Corresponding Source under the terms of this License,<br />\r\nin one of these ways:<br />\r\n<br />\r\n    a) Convey the object code in, or embodied in, a physical product<br />\r\n    (including a physical distribution medium), accompanied by the<br />\r\n    Corresponding Source fixed on a durable physical medium<br />\r\n    customarily used for software interchange.<br />\r\n<br />\r\n    b) Convey the object code in, or embodied in, a physical product<br />\r\n    (including a physical distribution medium), accompanied by a<br />\r\n    written offer, valid for at least three years and valid for as<br />\r\n    long as you offer spare parts or customer support for that product<br />\r\n    model, to give anyone who possesses the object code either (1) a<br />\r\n    copy of the Corresponding Source for all the software in the<br />\r\n    product that is covered by this License, on a durable physical<br />\r\n    medium customarily used for software interchange, for a price no<br />\r\n    more than your reasonable cost of physically performing this<br />\r\n    conveying of source, or (2) access to copy the<br />\r\n    Corresponding Source from a network server at no charge.<br />\r\n<br />\r\n    c) Convey individual copies of the object code with a copy of the<br />\r\n    written offer to provide the Corresponding Source.  This<br />\r\n    alternative is allowed only occasionally and noncommercially, and<br />\r\n    only if you received the object code with such an offer, in accord<br />\r\n    with subsection 6b.<br />\r\n<br />\r\n    d) Convey the object code by offering access from a designated<br />\r\n    place (gratis or for a charge), and offer equivalent access to the<br />\r\n    Corresponding Source in the same way through the same place at no<br />\r\n    further charge.  You need not require recipients to copy the<br />\r\n    Corresponding Source along with the object code.  If the place to<br />\r\n    copy the object code is a network server, the Corresponding Source<br />\r\n    may be on a different server (operated by you or a third party)<br />\r\n    that supports equivalent copying facilities, provided you maintain<br />\r\n    clear directions next to the object code saying where to find the<br />\r\n    Corresponding Source.  Regardless of what server hosts the<br />\r\n    Corresponding Source, you remain obligated to ensure that it is<br />\r\n    available for as long as needed to satisfy these requirements.<br />\r\n<br />\r\n    e) Convey the object code using peer-to-peer transmission, provided<br />\r\n    you inform other peers where the object code and Corresponding<br />\r\n    Source of the work are being offered to the general public at no<br />\r\n    charge under subsection 6d.<br />\r\n<br />\r\n  A separable portion of the object code, whose source code is excluded<br />\r\nfrom the Corresponding Source as a System Library, need not be<br />\r\nincluded in conveying the object code work.<br />\r\n<br />\r\n  A \"User Product\" is either (1) a \"consumer product\", which means any<br />\r\ntangible personal property which is normally used for personal, family,<br />\r\nor household purposes, or (2) anything designed or sold for incorporation<br />\r\ninto a dwelling.  In determining whether a product is a consumer product,<br />\r\ndoubtful cases shall be resolved in favor of coverage.  For a particular<br />\r\nproduct received by a particular user, \"normally used\" refers to a<br />\r\ntypical or common use of that class of product, regardless of the status<br />\r\nof the particular user or of the way in which the particular user<br />\r\nactually uses, or expects or is expected to use, the product.  A product<br />\r\nis a consumer product regardless of whether the product has substantial<br />\r\ncommercial, industrial or non-consumer uses, unless such uses represent<br />\r\nthe only significant mode of use of the product.<br />\r\n<br />\r\n  \"Installation Information\" for a User Product means any methods,<br />\r\nprocedures, authorization keys, or other information required to install<br />\r\nand execute modified versions of a covered work in that User Product from<br />\r\na modified version of its Corresponding Source.  The information must<br />\r\nsuffice to ensure that the continued functioning of the modified object<br />\r\ncode is in no case prevented or interfered with solely because<br />\r\nmodification has been made.<br />\r\n<br />\r\n  If you convey an object code work under this section in, or with, or<br />\r\nspecifically for use in, a User Product, and the conveying occurs as<br />\r\npart of a transaction in which the right of possession and use of the<br />\r\nUser Product is transferred to the recipient in perpetuity or for a<br />\r\nfixed term (regardless of how the transaction is characterized), the<br />\r\nCorresponding Source conveyed under this section must be accompanied<br />\r\nby the Installation Information.  But this requirement does not apply<br />\r\nif neither you nor any third party retains the ability to install<br />\r\nmodified object code on the User Product (for example, the work has<br />\r\nbeen installed in ROM).<br />\r\n<br />\r\n  The requirement to provide Installation Information does not include a<br />\r\nrequirement to continue to provide support service, warranty, or updates<br />\r\nfor a work that has been modified or installed by the recipient, or for<br />\r\nthe User Product in which it has been modified or installed.  Access to a<br />\r\nnetwork may be denied when the modification itself materially and<br />\r\nadversely affects the operation of the network or violates the rules and<br />\r\nprotocols for communication across the network.<br />\r\n<br />\r\n  Corresponding Source conveyed, and Installation Information provided,<br />\r\nin accord with this section must be in a format that is publicly<br />\r\ndocumented (and with an implementation available to the public in<br />\r\nsource code form), and must require no special password or key for<br />\r\nunpacking, reading or copying.<br />\r\n<br />\r\n  7. Additional Terms.<br />\r\n<br />\r\n  \"Additional permissions\" are terms that supplement the terms of this<br />\r\nLicense by making exceptions from one or more of its conditions.<br />\r\nAdditional permissions that are applicable to the entire Program shall<br />\r\nbe treated as though they were included in this License, to the extent<br />\r\nthat they are valid under applicable law.  If additional permissions<br />\r\napply only to part of the Program, that part may be used separately<br />\r\nunder those permissions, but the entire Program remains governed by<br />\r\nthis License without regard to the additional permissions.<br />\r\n<br />\r\n  When you convey a copy of a covered work, you may at your option<br />\r\nremove any additional permissions from that copy, or from any part of<br />\r\nit.  (Additional permissions may be written to require their own<br />\r\nremoval in certain cases when you modify the work.)  You may place<br />\r\nadditional permissions on material, added by you to a covered work,<br />\r\nfor which you have or can give appropriate copyright permission.<br />\r\n<br />\r\n  Notwithstanding any other provision of this License, for material you<br />\r\nadd to a covered work, you may (if authorized by the copyright holders of<br />\r\nthat material) supplement the terms of this License with terms:<br />\r\n<br />\r\n    a) Disclaiming warranty or limiting liability differently from the<br />\r\n    terms of sections 15 and 16 of this License; or<br />\r\n<br />\r\n    b) Requiring preservation of specified reasonable legal notices or<br />\r\n    author attributions in that material or in the Appropriate Legal<br />\r\n    Notices displayed by works containing it; or<br />\r\n<br />\r\n    c) Prohibiting misrepresentation of the origin of that material, or<br />\r\n    requiring that modified versions of such material be marked in<br />\r\n    reasonable ways as different from the original version; or<br />\r\n<br />\r\n    d) Limiting the use for publicity purposes of names of licensors or<br />\r\n    authors of the material; or<br />\r\n<br />\r\n    e) Declining to grant rights under trademark law for use of some<br />\r\n    trade names, trademarks, or service marks; or<br />\r\n<br />\r\n    f) Requiring indemnification of licensors and authors of that<br />\r\n    material by anyone who conveys the material (or modified versions of<br />\r\n    it) with contractual assumptions of liability to the recipient, for<br />\r\n    any liability that these contractual assumptions directly impose on<br />\r\n    those licensors and authors.<br />\r\n<br />\r\n  All other non-permissive additional terms are considered \"further<br />\r\nrestrictions\" within the meaning of section 10.  If the Program as you<br />\r\nreceived it, or any part of it, contains a notice stating that it is<br />\r\ngoverned by this License along with a term that is a further<br />\r\nrestriction, you may remove that term.  If a license document contains<br />\r\na further restriction but permits relicensing or conveying under this<br />\r\nLicense, you may add to a covered work material governed by the terms<br />\r\nof that license document, provided that the further restriction does<br />\r\nnot survive such relicensing or conveying.<br />\r\n<br />\r\n  If you add terms to a covered work in accord with this section, you<br />\r\nmust place, in the relevant source files, a statement of the<br />\r\nadditional terms that apply to those files, or a notice indicating<br />\r\nwhere to find the applicable terms.<br />\r\n<br />\r\n  Additional terms, permissive or non-permissive, may be stated in the<br />\r\nform of a separately written license, or stated as exceptions;<br />\r\nthe above requirements apply either way.<br />\r\n<br />\r\n  8. Termination.<br />\r\n<br />\r\n  You may not propagate or modify a covered work except as expressly<br />\r\nprovided under this License.  Any attempt otherwise to propagate or<br />\r\nmodify it is void, and will automatically terminate your rights under<br />\r\nthis License (including any patent licenses granted under the third<br />\r\nparagraph of section 11).<br />\r\n<br />\r\n  However, if you cease all violation of this License, then your<br />\r\nlicense from a particular copyright holder is reinstated (a)<br />\r\nprovisionally, unless and until the copyright holder explicitly and<br />\r\nfinally terminates your license, and (b) permanently, if the copyright<br />\r\nholder fails to notify you of the violation by some reasonable means<br />\r\nprior to 60 days after the cessation.<br />\r\n<br />\r\n  Moreover, your license from a particular copyright holder is<br />\r\nreinstated permanently if the copyright holder notifies you of the<br />\r\nviolation by some reasonable means, this is the first time you have<br />\r\nreceived notice of violation of this License (for any work) from that<br />\r\ncopyright holder, and you cure the violation prior to 30 days after<br />\r\nyour receipt of the notice.<br />\r\n<br />\r\n  Termination of your rights under this section does not terminate the<br />\r\nlicenses of parties who have received copies or rights from you under<br />\r\nthis License.  If your rights have been terminated and not permanently<br />\r\nreinstated, you do not qualify to receive new licenses for the same<br />\r\nmaterial under section 10.<br />\r\n<br />\r\n  9. Acceptance Not Required for Having Copies.<br />\r\n<br />\r\n  You are not required to accept this License in order to receive or<br />\r\nrun a copy of the Program.  Ancillary propagation of a covered work<br />\r\noccurring solely as a consequence of using peer-to-peer transmission<br />\r\nto receive a copy likewise does not require acceptance.  However,<br />\r\nnothing other than this License grants you permission to propagate or<br />\r\nmodify any covered work.  These actions infringe copyright if you do<br />\r\nnot accept this License.  Therefore, by modifying or propagating a<br />\r\ncovered work, you indicate your acceptance of this License to do so.<br />\r\n<br />\r\n  10. Automatic Licensing of Downstream Recipients.<br />\r\n<br />\r\n  Each time you convey a covered work, the recipient automatically<br />\r\nreceives a license from the original licensors, to run, modify and<br />\r\npropagate that work, subject to this License.  You are not responsible<br />\r\nfor enforcing compliance by third parties with this License.<br />\r\n<br />\r\n  An \"entity transaction\" is a transaction transferring control of an<br />\r\norganization, or substantially all assets of one, or subdividing an<br />\r\norganization, or merging organizations.  If propagation of a covered<br />\r\nwork results from an entity transaction, each party to that<br />\r\ntransaction who receives a copy of the work also receives whatever<br />\r\nlicenses to the work the party's predecessor in interest had or could<br />\r\ngive under the previous paragraph, plus a right to possession of the<br />\r\nCorresponding Source of the work from the predecessor in interest, if<br />\r\nthe predecessor has it or can get it with reasonable efforts.<br />\r\n<br />\r\n  You may not impose any further restrictions on the exercise of the<br />\r\nrights granted or affirmed under this License.  For example, you may<br />\r\nnot impose a license fee, royalty, or other charge for exercise of<br />\r\nrights granted under this License, and you may not initiate litigation<br />\r\n(including a cross-claim or counterclaim in a lawsuit) alleging that<br />\r\nany patent claim is infringed by making, using, selling, offering for<br />\r\nsale, or importing the Program or any portion of it.<br />\r\n<br />\r\n  11. Patents.<br />\r\n<br />\r\n  A \"contributor\" is a copyright holder who authorizes use under this<br />\r\nLicense of the Program or a work on which the Program is based.  The<br />\r\nwork thus licensed is called the contributor's \"contributor version\".<br />\r\n<br />\r\n  A contributor's \"essential patent claims\" are all patent claims<br />\r\nowned or controlled by the contributor, whether already acquired or<br />\r\nhereafter acquired, that would be infringed by some manner, permitted<br />\r\nby this License, of making, using, or selling its contributor version,<br />\r\nbut do not include claims that would be infringed only as a<br />\r\nconsequence of further modification of the contributor version.  For<br />\r\npurposes of this definition, \"control\" includes the right to grant<br />\r\npatent sublicenses in a manner consistent with the requirements of<br />\r\nthis License.<br />\r\n<br />\r\n  Each contributor grants you a non-exclusive, worldwide, royalty-free<br />\r\npatent license under the contributor's essential patent claims, to<br />\r\nmake, use, sell, offer for sale, import and otherwise run, modify and<br />\r\npropagate the contents of its contributor version.<br />\r\n<br />\r\n  In the following three paragraphs, a \"patent license\" is any express<br />\r\nagreement or commitment, however denominated, not to enforce a patent<br />\r\n(such as an express permission to practice a patent or covenant not to<br />\r\nsue for patent infringement).  To \"grant\" such a patent license to a<br />\r\nparty means to make such an agreement or commitment not to enforce a<br />\r\npatent against the party.<br />\r\n<br />\r\n  If you convey a covered work, knowingly relying on a patent license,<br />\r\nand the Corresponding Source of the work is not available for anyone<br />\r\nto copy, free of charge and under the terms of this License, through a<br />\r\npublicly available network server or other readily accessible means,<br />\r\nthen you must either (1) cause the Corresponding Source to be so<br />\r\navailable, or (2) arrange to deprive yourself of the benefit of the<br />\r\npatent license for this particular work, or (3) arrange, in a manner<br />\r\nconsistent with the requirements of this License, to extend the patent<br />\r\nlicense to downstream recipients.  \"Knowingly relying\" means you have<br />\r\nactual knowledge that, but for the patent license, your conveying the<br />\r\ncovered work in a country, or your recipient's use of the covered work<br />\r\nin a country, would infringe one or more identifiable patents in that<br />\r\ncountry that you have reason to believe are valid.<br />\r\n<br />\r\n  If, pursuant to or in connection with a single transaction or<br />\r\narrangement, you convey, or propagate by procuring conveyance of, a<br />\r\ncovered work, and grant a patent license to some of the parties<br />\r\nreceiving the covered work authorizing them to use, propagate, modify<br />\r\nor convey a specific copy of the covered work, then the patent license<br />\r\nyou grant is automatically extended to all recipients of the covered<br />\r\nwork and works based on it.<br />\r\n<br />\r\n  A patent license is \"discriminatory\" if it does not include within<br />\r\nthe scope of its coverage, prohibits the exercise of, or is<br />\r\nconditioned on the non-exercise of one or more of the rights that are<br />\r\nspecifically granted under this License.  You may not convey a covered<br />\r\nwork if you are a party to an arrangement with a third party that is<br />\r\nin the business of distributing software, under which you make payment<br />\r\nto the third party based on the extent of your activity of conveying<br />\r\nthe work, and under which the third party grants, to any of the<br />\r\nparties who would receive the covered work from you, a discriminatory<br />\r\npatent license (a) in connection with copies of the covered work<br />\r\nconveyed by you (or copies made from those copies), or (b) primarily<br />\r\nfor and in connection with specific products or compilations that<br />\r\ncontain the covered work, unless you entered into that arrangement,<br />\r\nor that patent license was granted, prior to 28 March 2007.<br />\r\n<br />\r\n  Nothing in this License shall be construed as excluding or limiting<br />\r\nany implied license or other defenses to infringement that may<br />\r\notherwise be available to you under applicable patent law.<br />\r\n<br />\r\n  12. No Surrender of Others' Freedom.<br />\r\n<br />\r\n  If conditions are imposed on you (whether by court order, agreement or<br />\r\notherwise) that contradict the conditions of this License, they do not<br />\r\nexcuse you from the conditions of this License.  If you cannot convey a<br />\r\ncovered work so as to satisfy simultaneously your obligations under this<br />\r\nLicense and any other pertinent obligations, then as a consequence you may<br />\r\nnot convey it at all.  For example, if you agree to terms that obligate you<br />\r\nto collect a royalty for further conveying from those to whom you convey<br />\r\nthe Program, the only way you could satisfy both those terms and this<br />\r\nLicense would be to refrain entirely from conveying the Program.<br />\r\n<br />\r\n  13. Use with the GNU Affero General Public License.<br />\r\n<br />\r\n  Notwithstanding any other provision of this License, you have<br />\r\npermission to link or combine any covered work with a work licensed<br />\r\nunder version 3 of the GNU Affero General Public License into a single<br />\r\ncombined work, and to convey the resulting work.  The terms of this<br />\r\nLicense will continue to apply to the part which is the covered work,<br />\r\nbut the special requirements of the GNU Affero General Public License,<br />\r\nsection 13, concerning interaction through a network will apply to the<br />\r\ncombination as such.<br />\r\n<br />\r\n  14. Revised Versions of this License.<br />\r\n<br />\r\n  The Free Software Foundation may publish revised and/or new versions of<br />\r\nthe GNU General Public License from time to time.  Such new versions will<br />\r\nbe similar in spirit to the present version, but may differ in detail to<br />\r\naddress new problems or concerns.<br />\r\n<br />\r\n  Each version is given a distinguishing version number.  If the<br />\r\nProgram specifies that a certain numbered version of the GNU General<br />\r\nPublic License \"or any later version\" applies to it, you have the<br />\r\noption of following the terms and conditions either of that numbered<br />\r\nversion or of any later version published by the Free Software<br />\r\nFoundation.  If the Program does not specify a version number of the<br />\r\nGNU General Public License, you may choose any version ever published<br />\r\nby the Free Software Foundation.<br />\r\n<br />\r\n  If the Program specifies that a proxy can decide which future<br />\r\nversions of the GNU General Public License can be used, that proxy's<br />\r\npublic statement of acceptance of a version permanently authorizes you<br />\r\nto choose that version for the Program.<br />\r\n<br />\r\n  Later license versions may give you additional or different<br />\r\npermissions.  However, no additional obligations are imposed on any<br />\r\nauthor or copyright holder as a result of your choosing to follow a<br />\r\nlater version.<br />\r\n<br />\r\n  15. Disclaimer of Warranty.<br />\r\n<br />\r\n  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY<br />\r\nAPPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT<br />\r\nHOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM \"AS IS\" WITHOUT WARRANTY<br />\r\nOF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,<br />\r\nTHE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR<br />\r\nPURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM<br />\r\nIS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF<br />\r\nALL NECESSARY SERVICING, REPAIR OR CORRECTION.<br />\r\n<br />\r\n  16. Limitation of Liability.<br />\r\n<br />\r\n  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING<br />\r\nWILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS<br />\r\nTHE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY<br />\r\nGENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE<br />\r\nUSE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF<br />\r\nDATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD<br />\r\nPARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),<br />\r\nEVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF<br />\r\nSUCH DAMAGES.<br />\r\n<br />\r\n  17. Interpretation of Sections 15 and 16.<br />\r\n<br />\r\n  If the disclaimer of warranty and limitation of liability provided<br />\r\nabove cannot be given local legal effect according to their terms,<br />\r\nreviewing courts shall apply local law that most closely approximates<br />\r\nan absolute waiver of all civil liability in connection with the<br />\r\nProgram, unless a warranty or assumption of liability accompanies a<br />\r\ncopy of the Program in return for a fee.<br />\r\n<br />\r\n                     END OF TERMS AND CONDITIONS<br />\r\n<br />\r\n            \r\n\t</span>\r\n</div>\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "109",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/xss_r/?name=ZAP",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/xss_r/",
+    "param_location": "query",
+    "params": {
+      "name": "ZAP"
+    },
+    "scannable_params": [
+      "name"
+    ],
+    "parameters": [
+      {
+        "name": "name",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_r/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "x-xss-protection": "0",
+      "vary": "Accept-Encoding",
+      "content-length": "4358",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Reflected Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Reflected Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form name=\"XSS\" action=\"#\" method=\"GET\">\r\n\t\t\t<p>\r\n\t\t\t\tWhat's your name?\r\n\t\t\t\t<input type=\"text\" name=\"name\">\r\n\t\t\t\t<input type=\"submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t<pre>Hello ZAP</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet\" target=\"_blank\">https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_scripting</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/xss-faq.html\" target=\"_blank\">http://www.cgisecurity.com/xss-faq.html</a></li>\r\n\t\t<li><a href=\"http://www.scriptalert1.com/\" target=\"_blank\">http://www.scriptalert1.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_r&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_r&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "110",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/sqli_blind/?Submit=Submit&id=ZAP",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/sqli_blind/",
+    "param_location": "query",
+    "params": {
+      "Submit": "Submit",
+      "id": "ZAP"
+    },
+    "scannable_params": [
+      "Submit",
+      "id"
+    ],
+    "parameters": [
+      {
+        "name": "Submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "id",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/sqli_blind/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 404,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "content-length": "4567",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: SQL Injection (Blind) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: SQL Injection (Blind)</h1>\r\n\r\n\t\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\t<p>\r\n\t\t\t\tUser ID:\n\t\t\t\t<input type=\"text\" size=\"15\" name=\"id\">\n\t\t\t\t<input type=\"submit\" name=\"Submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t<pre>User ID is MISSING from the database.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"http://www.securiteam.com/securityreviews/5DP0N1P76E.html\" target=\"_blank\">http://www.securiteam.com/securityreviews/5DP0N1P76E.html</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/SQL_injection\" target=\"_blank\">https://en.wikipedia.org/wiki/SQL_injection</a></li>\r\n\t\t<li><a href=\"http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/\" target=\"_blank\">http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/</a></li>\r\n\t\t<li><a href=\"http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet\" target=\"_blank\">http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Blind_SQL_Injection\" target=\"_blank\">https://www.owasp.org/index.php/Blind_SQL_Injection</a></li>\r\n\t\t<li><a href=\"http://bobby-tables.com/\" target=\"_blank\">http://bobby-tables.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=sqli_blind&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=sqli_blind&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> disabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "115",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/security.php?phpids=on",
+    "base_url": "http://host.docker.internal:8080/security.php",
+    "param_location": "query",
+    "params": {
+      "phpids": "on"
+    },
+    "scannable_params": [
+      "phpids"
+    ],
+    "parameters": [
+      {
+        "name": "phpids",
+        "scan": true,
+        "sample_values": [
+          "on"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/security.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "/security.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "118",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/security.php?test=%2522%3E%3Cscript%3Eeval(window.name)%3C/script%3E",
+    "base_url": "http://host.docker.internal:8080/security.php",
+    "param_location": "query",
+    "params": {
+      "test": "%22><script>eval(window.name)</script>"
+    },
+    "scannable_params": [
+      "test"
+    ],
+    "parameters": [
+      {
+        "name": "test",
+        "scan": true,
+        "sample_values": [
+          "%22><script>eval(window.name)</script>"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/security.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "content-length": "58",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": "Hacking attempt detected and logged.<br />Have a nice day."
+  },
+  {
+    "zap_message_id": "119",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/security.php",
+    "base_url": "http://host.docker.internal:8080/security.php",
+    "param_location": "body",
+    "params": {
+      "security": "low",
+      "seclev_submit": "Submit",
+      "user_token": "d1cf5ef4c19313b3d17cebde6b712846"
+    },
+    "scannable_params": [
+      "security",
+      "seclev_submit"
+    ],
+    "parameters": [
+      {
+        "name": "security",
+        "scan": true,
+        "sample_values": [
+          "low"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "seclev_submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "user_token",
+        "scan": false,
+        "sample_values": [
+          "d1cf5ef4c19313b3d17cebde6b712846"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/security.php",
+      "content-length": "77"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "security=low&seclev_submit=Submit&user_token=d1cf5ef4c19313b3d17cebde6b712846",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "set-cookie": "security=low",
+      "location": "/security.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "122",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/ids_log.php?clear_log=Clear+Log",
+    "base_url": "http://host.docker.internal:8080/ids_log.php",
+    "param_location": "query",
+    "params": {
+      "clear_log": "Clear Log"
+    },
+    "scannable_params": [
+      "clear_log"
+    ],
+    "parameters": [
+      {
+        "name": "clear_log",
+        "scan": true,
+        "sample_values": [
+          "Clear Log"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/ids_log.php"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "/ids_log.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "126",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/upload/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/upload/",
+    "param_location": "body",
+    "params": {
+      "MAX_FILE_SIZE": "100000",
+      "uploaded": "test_file.txt",
+      "Upload": "Upload"
+    },
+    "scannable_params": [
+      "MAX_FILE_SIZE",
+      "uploaded",
+      "Upload"
+    ],
+    "parameters": [
+      {
+        "name": "MAX_FILE_SIZE",
+        "scan": true,
+        "sample_values": [
+          "100000"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "uploaded",
+        "scan": true,
+        "sample_values": [
+          "test_file.txt"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Upload",
+        "scan": true,
+        "sample_values": [
+          "Upload"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/upload/",
+      "content-length": "57"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "MAX_FILE_SIZE=100000&uploaded=test_file.txt&Upload=Upload",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:28 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4360",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: File Upload :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: File Upload</h1>\r\n\r\n\t\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form enctype=\"multipart/form-data\" action=\"#\" method=\"POST\">\r\n\t\t\t<input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"100000\" />\r\n\t\t\tChoose an image to upload:<br /><br />\r\n\t\t\t<input name=\"uploaded\" type=\"file\" /><br />\r\n\t\t\t<br />\r\n\t\t\t<input type=\"submit\" name=\"Upload\" value=\"Upload\" />\n\r\n\t\t</form>\r\n\t\t<pre>Your image was not uploaded.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Unrestricted_File_Upload\" target=\"_blank\">https://www.owasp.org/index.php/Unrestricted_File_Upload</a></li>\r\n\t\t<li><a href=\"https://blogs.securiteam.com/index.php/archives/1268\" target=\"_blank\">https://blogs.securiteam.com/index.php/archives/1268</a></li>\r\n\t\t<li><a href=\"https://www.acunetix.com/websitesecurity/upload-forms-threat/\" target=\"_blank\">https://www.acunetix.com/websitesecurity/upload-forms-threat/</a></li>\r\n\t</ul>\r\n</div>\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t<div class=\"body_padded\"><div class=\"message\">Security level set to low</div><div class=\"message\">PHPIDS log cleared</div></div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=upload&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=upload&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "127",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/sqli/?Submit=Submit&id=ZAP",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/sqli/",
+    "param_location": "query",
+    "params": {
+      "Submit": "Submit",
+      "id": "ZAP"
+    },
+    "scannable_params": [
+      "Submit",
+      "id"
+    ],
+    "parameters": [
+      {
+        "name": "Submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "id",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/sqli/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:29 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4478",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: SQL Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: SQL Injection</h1>\r\n\r\n\t\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\t<p>\r\n\t\t\t\tUser ID:\n\t\t\t\t<input type=\"text\" size=\"15\" name=\"id\">\n\t\t\t\t<input type=\"submit\" name=\"Submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"http://www.securiteam.com/securityreviews/5DP0N1P76E.html\" target=\"_blank\">http://www.securiteam.com/securityreviews/5DP0N1P76E.html</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/SQL_injection\" target=\"_blank\">https://en.wikipedia.org/wiki/SQL_injection</a></li>\r\n\t\t<li><a href=\"http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/\" target=\"_blank\">http://ferruh.mavituna.com/sql-injection-cheatsheet-oku/</a></li>\r\n\t\t<li><a href=\"http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet\" target=\"_blank\">http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/SQL_Injection\" target=\"_blank\">https://www.owasp.org/index.php/SQL_Injection</a></li>\r\n\t\t<li><a href=\"http://bobby-tables.com/\" target=\"_blank\">http://bobby-tables.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=sqli&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=sqli&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "128",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/javascript/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/javascript/",
+    "param_location": "body",
+    "params": {
+      "token": "",
+      "phrase": "ChangeMe",
+      "send": "Submit"
+    },
+    "scannable_params": [
+      "phrase",
+      "send"
+    ],
+    "parameters": [
+      {
+        "name": "token",
+        "scan": false,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "phrase",
+        "scan": true,
+        "sample_values": [
+          "ChangeMe"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "send",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/javascript/",
+      "content-length": "34"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "token=&phrase=ChangeMe&send=Submit",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:29 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-type": "text/html;charset=utf-8",
+      "content-length": "8412"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: JavaScript Attacks :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t<div class=\"body_padded\">\n\t<h1>Vulnerability: JavaScript Attacks</h1>\n\n\t<div class=\"vulnerable_code_area\">\n\t<p>\n\t\tSubmit the word \"success\" to win.\n\t</p>\n\n\t<p>You got the phrase wrong.</p>\n\n\t<form name=\"low_js\" method=\"post\">\n\t\t<input type=\"hidden\" name=\"token\" value=\"\" id=\"token\" />\n\t\t<label for=\"phrase\">Phrase</label> <input type=\"text\" name=\"phrase\" value=\"ChangeMe\" id=\"phrase\" />\n\t\t<input type=\"submit\" id=\"send\" name=\"send\" value=\"Submit\" />\n\t</form><script>\n\n/*\nMD5 code from here\nhttps://github.com/blueimp/JavaScript-MD5\n*/\n\n!function(n){\"use strict\";function t(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}function r(n,t){return n<<t|n>>>32-t}function e(n,e,o,u,c,f){return t(r(t(t(e,n),t(u,f)),c),o)}function o(n,t,r,o,u,c,f){return e(t&r|~t&o,n,t,u,c,f)}function u(n,t,r,o,u,c,f){return e(t&o|r&~o,n,t,u,c,f)}function c(n,t,r,o,u,c,f){return e(t^r^o,n,t,u,c,f)}function f(n,t,r,o,u,c,f){return e(r^(t|~o),n,t,u,c,f)}function i(n,r){n[r>>5]|=128<<r%32,n[14+(r+64>>>9<<4)]=r;var e,i,a,d,h,l=1732584193,g=-271733879,v=-1732584194,m=271733878;for(e=0;e<n.length;e+=16)i=l,a=g,d=v,h=m,g=f(g=f(g=f(g=f(g=c(g=c(g=c(g=c(g=u(g=u(g=u(g=u(g=o(g=o(g=o(g=o(g,v=o(v,m=o(m,l=o(l,g,v,m,n[e],7,-680876936),g,v,n[e+1],12,-389564586),l,g,n[e+2],17,606105819),m,l,n[e+3],22,-1044525330),v=o(v,m=o(m,l=o(l,g,v,m,n[e+4],7,-176418897),g,v,n[e+5],12,1200080426),l,g,n[e+6],17,-1473231341),m,l,n[e+7],22,-45705983),v=o(v,m=o(m,l=o(l,g,v,m,n[e+8],7,1770035416),g,v,n[e+9],12,-1958414417),l,g,n[e+10],17,-42063),m,l,n[e+11],22,-1990404162),v=o(v,m=o(m,l=o(l,g,v,m,n[e+12],7,1804603682),g,v,n[e+13],12,-40341101),l,g,n[e+14],17,-1502002290),m,l,n[e+15],22,1236535329),v=u(v,m=u(m,l=u(l,g,v,m,n[e+1],5,-165796510),g,v,n[e+6],9,-1069501632),l,g,n[e+11],14,643717713),m,l,n[e],20,-373897302),v=u(v,m=u(m,l=u(l,g,v,m,n[e+5],5,-701558691),g,v,n[e+10],9,38016083),l,g,n[e+15],14,-660478335),m,l,n[e+4],20,-405537848),v=u(v,m=u(m,l=u(l,g,v,m,n[e+9],5,568446438),g,v,n[e+14],9,-1019803690),l,g,n[e+3],14,-187363961),m,l,n[e+8],20,1163531501),v=u(v,m=u(m,l=u(l,g,v,m,n[e+13],5,-1444681467),g,v,n[e+2],9,-51403784),l,g,n[e+7],14,1735328473),m,l,n[e+12],20,-1926607734),v=c(v,m=c(m,l=c(l,g,v,m,n[e+5],4,-378558),g,v,n[e+8],11,-2022574463),l,g,n[e+11],16,1839030562),m,l,n[e+14],23,-35309556),v=c(v,m=c(m,l=c(l,g,v,m,n[e+1],4,-1530992060),g,v,n[e+4],11,1272893353),l,g,n[e+7],16,-155497632),m,l,n[e+10],23,-1094730640),v=c(v,m=c(m,l=c(l,g,v,m,n[e+13],4,681279174),g,v,n[e],11,-358537222),l,g,n[e+3],16,-722521979),m,l,n[e+6],23,76029189),v=c(v,m=c(m,l=c(l,g,v,m,n[e+9],4,-640364487),g,v,n[e+12],11,-421815835),l,g,n[e+15],16,530742520),m,l,n[e+2],23,-995338651),v=f(v,m=f(m,l=f(l,g,v,m,n[e],6,-198630844),g,v,n[e+7],10,1126891415),l,g,n[e+14],15,-1416354905),m,l,n[e+5],21,-57434055),v=f(v,m=f(m,l=f(l,g,v,m,n[e+12],6,1700485571),g,v,n[e+3],10,-1894986606),l,g,n[e+10],15,-1051523),m,l,n[e+1],21,-2054922799),v=f(v,m=f(m,l=f(l,g,v,m,n[e+8],6,1873313359),g,v,n[e+15],10,-30611744),l,g,n[e+6],15,-1560198380),m,l,n[e+13],21,1309151649),v=f(v,m=f(m,l=f(l,g,v,m,n[e+4],6,-145523070),g,v,n[e+11],10,-1120210379),l,g,n[e+2],15,718787259),m,l,n[e+9],21,-343485551),l=t(l,i),g=t(g,a),v=t(v,d),m=t(m,h);return[l,g,v,m]}function a(n){var t,r=\"\",e=32*n.length;for(t=0;t<e;t+=8)r+=String.fromCharCode(n[t>>5]>>>t%32&255);return r}function d(n){var t,r=[];for(r[(n.length>>2)-1]=void 0,t=0;t<r.length;t+=1)r[t]=0;var e=8*n.length;for(t=0;t<e;t+=8)r[t>>5]|=(255&n.charCodeAt(t/8))<<t%32;return r}function h(n){return a(i(d(n),8*n.length))}function l(n,t){var r,e,o=d(n),u=[],c=[];for(u[15]=c[15]=void 0,o.length>16&&(o=i(o,8*n.length)),r=0;r<16;r+=1)u[r]=909522486^o[r],c[r]=1549556828^o[r];return e=i(u.concat(d(t)),512+8*t.length),a(i(c.concat(e),640))}function g(n){var t,r,e=\"\";for(r=0;r<n.length;r+=1)t=n.charCodeAt(r),e+=\"0123456789abcdef\".charAt(t>>>4&15)+\"0123456789abcdef\".charAt(15&t);return e}function v(n){return unescape(encodeURIComponent(n))}function m(n){return h(v(n))}function p(n){return g(m(n))}function s(n,t){return l(v(n),v(t))}function C(n,t){return g(s(n,t))}function A(n,t,r){return t?r?s(t,n):C(t,n):r?m(n):p(n)}\"function\"==typeof define&&define.amd?define(function(){return A}):\"object\"==typeof module&&module.exports?module.exports=A:n.md5=A}(this);\n\n\tfunction rot13(inp) {\n\t\treturn inp.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<=\"Z\"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});\n\t}\n\n\tfunction generate_token() {\n\t\tvar phrase = document.getElementById(\"phrase\").value;\n\t\tdocument.getElementById(\"token\").value = md5(rot13(phrase));\n\t}\n\n\tgenerate_token();\n</script>\t</div>\n\t<h2>More Information</h2>\n\t<ul>\n\t\t<li><a href=\"https://www.w3schools.com/js/\" target=\"_blank\">https://www.w3schools.com/js/</a></li>\n\t\t<li><a href=\"https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL\" target=\"_blank\">https://www.youtube.com/watch?v=cs7EQdWO5o0&index=17&list=WL</a></li>\n\t\t<li><a href=\"https://ponyfoo.com/articles/es6-proxies-in-depth\" target=\"_blank\">https://ponyfoo.com/articles/es6-proxies-in-depth</a></li>\n\t</ul>\n\t<p><i>Module developed by <a href='https://twitter.com/digininja'>Digininja</a>.</i></p>\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=javascript&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=javascript&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "129",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/csp/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/csp/",
+    "param_location": "body",
+    "params": {
+      "include": "ZAP"
+    },
+    "scannable_params": [
+      "include"
+    ],
+    "parameters": [
+      {
+        "name": "include",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/csp/",
+      "content-length": "11"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "include=ZAP",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:29 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "content-security-policy": "script-src 'self' https://pastebin.com  example.com code.jquery.com https://ssl.google-analytics.com ;",
+      "vary": "Accept-Encoding",
+      "content-length": "4252",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Content Security Policy (CSP) Bypass :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t<div class=\"body_padded\">\n\t<h1>Vulnerability: Content Security Policy (CSP) Bypass</h1>\n\n\t<div class=\"vulnerable_code_area\">\n\t<script src='ZAP'></script>\n\n<form name=\"csp\" method=\"POST\">\n\t<p>You can include scripts from external sources, examine the Content Security Policy and enter a URL to include here:</p>\n\t<input size=\"50\" type=\"text\" name=\"include\" value=\"\" id=\"include\" />\n\t<input type=\"submit\" value=\"Include\" />\n</form>\n\t</div>\n\t<h2>More Information</h2>\n\t<ul>\n\t\t<li><a href=\"https://content-security-policy.com/\" target=\"_blank\">Content Security Policy Reference</a></li>\n\t\t<li><a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP\" target=\"_blank\">Mozilla Developer Network - CSP: script-src</a></li>\n\t\t<li><a href=\"https://blog.mozilla.org/security/2014/10/04/csp-for-the-web-we-have/\" target=\"_blank\">Mozilla Security Blog - CSP for the web we have</a></li>\n\t</ul>\n\t<p><i>Module developed by <a href='https://twitter.com/digininja'>Digininja</a>.</i></p>\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=csp&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=csp&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "132",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+    "param_location": "body",
+    "params": {
+      "txtName": "ZAP",
+      "mtxMessage": "",
+      "btnSign": "Sign Guestbook"
+    },
+    "scannable_params": [
+      "txtName",
+      "mtxMessage",
+      "btnSign"
+    ],
+    "parameters": [
+      {
+        "name": "txtName",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "mtxMessage",
+        "scan": true,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "btnSign",
+        "scan": true,
+        "sample_values": [
+          "Sign Guestbook"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+      "content-length": "46"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "txtName=ZAP&mtxMessage=&btnSign=Sign+Guestbook",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:30 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "5057",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Stored Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Stored Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form method=\"post\" name=\"guestform\" \">\r\n\t\t\t<table width=\"550\" border=\"0\" cellpadding=\"2\" cellspacing=\"1\">\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Name *</td>\r\n\t\t\t\t\t<td><input name=\"txtName\" type=\"text\" size=\"30\" maxlength=\"10\"></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Message *</td>\r\n\t\t\t\t\t<td><textarea name=\"mtxMessage\" cols=\"50\" rows=\"3\" maxlength=\"50\"></textarea></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">&nbsp;</td>\r\n\t\t\t\t\t<td>\r\n\t\t\t\t\t\t<input name=\"btnSign\" type=\"submit\" value=\"Sign Guestbook\" onclick=\"return validateGuestbookForm(this.form);\" />\r\n\t\t\t\t\t\t<input name=\"btnClear\" type=\"submit\" value=\"Clear Guestbook\" onClick=\"return confirmClearGuestbook();\" />\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\n\r\n\t\t</form>\r\n\t\t\r\n\t</div>\r\n\t<br />\r\n\r\n\t<div id=\"guestbook_comments\">Name: test<br />Message: This is a test comment.<br /></div>\n<div id=\"guestbook_comments\">Name: ZAP<br />Message: <br /></div>\n\r\n\t<br />\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet\" target=\"_blank\">https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_scripting</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/xss-faq.html\" target=\"_blank\">http://www.cgisecurity.com/xss-faq.html</a></li>\r\n\t\t<li><a href=\"http://www.scriptalert1.com/\" target=\"_blank\">http://www.scriptalert1.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_s&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_s&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "134",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/exec/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/exec/",
+    "param_location": "body",
+    "params": {
+      "ip": "ZAP",
+      "Submit": "Submit"
+    },
+    "scannable_params": [
+      "ip",
+      "Submit"
+    ],
+    "parameters": [
+      {
+        "name": "ip",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Submit",
+        "scan": true,
+        "sample_values": [
+          "Submit"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/exec/",
+      "content-length": "20"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "ip=ZAP&Submit=Submit",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:30 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4177",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Command Injection :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Command Injection</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<h2>Ping a device</h2>\r\n\r\n\t\t<form name=\"ping\" action=\"#\" method=\"post\">\r\n\t\t\t<p>\r\n\t\t\t\tEnter an IP address:\r\n\t\t\t\t<input type=\"text\" name=\"ip\" size=\"30\">\r\n\t\t\t\t<input type=\"submit\" name=\"Submit\" value=\"Submit\">\r\n\t\t\t</p>\n\r\n\t\t</form>\r\n\t\t<pre></pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"http://www.scribd.com/doc/2530476/Php-Endangers-Remote-Code-Execution\" target=\"_blank\">http://www.scribd.com/doc/2530476/Php-Endangers-Remote-Code-Execution</a></li>\r\n\t\t<li><a href=\"http://www.ss64.com/bash/\" target=\"_blank\">http://www.ss64.com/bash/</a></li>\r\n\t\t<li><a href=\"http://www.ss64.com/nt/\" target=\"_blank\">http://www.ss64.com/nt/</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Command_Injection\" target=\"_blank\">https://www.owasp.org/index.php/Command_Injection</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=exec&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=exec&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "135",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/xss_d/?default",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/xss_d/",
+    "param_location": "query",
+    "params": {
+      "default": ""
+    },
+    "scannable_params": [
+      "default"
+    ],
+    "parameters": [
+      {
+        "name": "default",
+        "scan": true,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_d/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:30 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4807",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: DOM Based Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t<div class=\"body_padded\">\r\n\t<h1>Vulnerability: DOM Based Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n \r\n \t\t<p>Please choose a language:</p>\r\n\r\n\t\t<form name=\"XSS\" method=\"GET\">\r\n\t\t\t<select name=\"default\">\r\n\t\t\t\t<script>\r\n\t\t\t\t\tif (document.location.href.indexOf(\"default=\") >= 0) {\r\n\t\t\t\t\t\tvar lang = document.location.href.substring(document.location.href.indexOf(\"default=\")+8);\r\n\t\t\t\t\t\tdocument.write(\"<option value='\" + lang + \"'>\" + decodeURI(lang) + \"</option>\");\r\n\t\t\t\t\t\tdocument.write(\"<option value='' disabled='disabled'>----</option>\");\r\n\t\t\t\t\t}\r\n\t\t\t\t\t    \r\n\t\t\t\t\tdocument.write(\"<option value='English'>English</option>\");\r\n\t\t\t\t\tdocument.write(\"<option value='French'>French</option>\");\r\n\t\t\t\t\tdocument.write(\"<option value='Spanish'>Spanish</option>\");\r\n\t\t\t\t\tdocument.write(\"<option value='German'>German</option>\");\r\n\t\t\t\t</script>\r\n\t\t\t</select>\r\n\t\t\t<input type=\"submit\" value=\"Select\" />\r\n\t\t</form>\r\n\t</div>\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)\" target=\"_blank\">https://www.owasp.org/index.php/Testing_for_DOM-based_Cross_site_scripting_(OTG-CLIENT-001)</a></li>\r\n\t\t<li><a href=\"https://www.acunetix.com/blog/articles/dom-xss-explained/\" target=\"_blank\">https://www.acunetix.com/blog/articles/dom-xss-explained/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_d&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_d&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "136",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/captcha/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/captcha/",
+    "param_location": "body",
+    "params": {
+      "step": "1",
+      "password_new": "ZAP",
+      "password_conf": "ZAP",
+      "Change": "Change"
+    },
+    "scannable_params": [
+      "step",
+      "password_new",
+      "password_conf",
+      "Change"
+    ],
+    "parameters": [
+      {
+        "name": "step",
+        "scan": true,
+        "sample_values": [
+          "1"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "password_new",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "password_conf",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "Change",
+        "scan": true,
+        "sample_values": [
+          "Change"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/captcha/",
+      "content-length": "55"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "step=1&password_new=ZAP&password_conf=ZAP&Change=Change",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:31 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4714",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Insecure CAPTCHA :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n\t<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Insecure CAPTCHA</h1>\r\n\r\n\t<div class=\"warning\"><em>reCAPTCHA API key missing</em> from config file: /var/www/html/config/config.inc.php</div>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form action=\"#\" method=\"POST\" style=\"display:none;\">\r\n\t\t\t<h3>Change your password:</h3>\r\n\t\t\t<br />\r\n\r\n\t\t\t<input type=\"hidden\" name=\"step\" value=\"1\" />\n\t\t\tNew password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_new\"><br />\r\n\t\t\tConfirm new password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_conf\"><br />\r\n\r\n\t\t\t\n\t\t<script src='https://www.google.com/recaptcha/api.js'></script>\n\t\t<br /> <div class='g-recaptcha' data-theme='dark' data-sitekey=''></div>\n\t\r\n\t\t\t<br />\r\n\r\n\t\t\t<input type=\"submit\" value=\"Change\" name=\"Change\">\r\n\t\t</form>\r\n\t\t<em>Please register for a key</em> from reCAPTCHA: <a href=\"https://www.google.com/recaptcha/admin/create\" target=\"_blank\">https://www.google.com/recaptcha/admin/create</a>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/CAPTCHA\" target=\"_blank\">https://en.wikipedia.org/wiki/CAPTCHA</a></li>\r\n\t\t<li><a href=\"https://www.google.com/recaptcha/\" target=\"_blank\">https://www.google.com/recaptcha/</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Testing_for_Captcha_(OWASP-AT-012)\" target=\"_blank\">https://www.owasp.org/index.php/Testing_for_Captcha_(OWASP-AT-012)</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=captcha&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=captcha&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "137",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/csrf/?Change=Change&password_conf=ZAP&password_new=ZAP",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/csrf/",
+    "param_location": "query",
+    "params": {
+      "Change": "Change",
+      "password_conf": "ZAP",
+      "password_new": "ZAP"
+    },
+    "scannable_params": [
+      "Change",
+      "password_conf",
+      "password_new"
+    ],
+    "parameters": [
+      {
+        "name": "Change",
+        "scan": true,
+        "sample_values": [
+          "Change"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "password_conf",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "password_new",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/csrf/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:31 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4296",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Cross Site Request Forgery (CSRF) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Cross Site Request Forgery (CSRF)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<h3>Change your admin password:</h3>\r\n\t\t<br />\r\n\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\tNew password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_new\"><br />\r\n\t\t\tConfirm new password:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password_conf\"><br />\r\n\t\t\t<br />\r\n\t\t\t<input type=\"submit\" value=\"Change\" name=\"Change\">\n\r\n\t\t</form>\r\n\t\t<pre>Password Changed.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-Site_Request_Forgery\" target=\"_blank\">https://www.owasp.org/index.php/Cross-Site_Request_Forgery</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/csrf-faq.html\" target=\"_blank\">http://www.cgisecurity.com/csrf-faq.html</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_request_forgery \" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_request_forgery </a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=csrf&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=csrf&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "138",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/vulnerabilities/brute/?Login=Login&password=ZAP&username=ZAP",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/brute/",
+    "param_location": "query",
+    "params": {
+      "Login": "Login",
+      "password": "ZAP",
+      "username": "ZAP"
+    },
+    "scannable_params": [
+      "Login",
+      "password",
+      "username"
+    ],
+    "parameters": [
+      {
+        "name": "Login",
+        "scan": true,
+        "sample_values": [
+          "Login"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "password",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      },
+      {
+        "name": "username",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "query"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/brute/"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:31 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4374",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Brute Force :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"selected\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Brute Force</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<h2>Login</h2>\r\n\r\n\t\t<form action=\"#\" method=\"GET\">\r\n\t\t\tUsername:<br />\r\n\t\t\t<input type=\"text\" name=\"username\"><br />\r\n\t\t\tPassword:<br />\r\n\t\t\t<input type=\"password\" AUTOCOMPLETE=\"off\" name=\"password\"><br />\r\n\t\t\t<br />\r\n\t\t\t<input type=\"submit\" value=\"Login\" name=\"Login\">\n\r\n\t\t</form>\r\n\t\t<pre><br />Username and/or password incorrect.</pre>\r\n\t</div>\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)\" target=\"_blank\">https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)</a></li>\r\n\t\t<li><a href=\"http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password\" target=\"_blank\">http://www.symantec.com/connect/articles/password-crackers-ensuring-security-your-password</a></li>\r\n\t\t<li><a href=\"http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.html\" target=\"_blank\">http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in-windows.html</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=brute&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=brute&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  },
+  {
+    "zap_message_id": "139",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+    "base_url": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+    "param_location": "body",
+    "params": {
+      "txtName": "ZAP",
+      "mtxMessage": "",
+      "btnClear": "Clear Guestbook"
+    },
+    "scannable_params": [
+      "txtName",
+      "mtxMessage",
+      "btnClear"
+    ],
+    "parameters": [
+      {
+        "name": "txtName",
+        "scan": true,
+        "sample_values": [
+          "ZAP"
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "mtxMessage",
+        "scan": true,
+        "sample_values": [
+          ""
+        ],
+        "request_location": "body"
+      },
+      {
+        "name": "btnClear",
+        "scan": true,
+        "sample_values": [
+          "Clear Guestbook"
+        ],
+        "request_location": "body"
+      }
+    ],
+    "can_scan": true,
+    "role": "guest",
+    "enctype": "application/x-www-form-urlencoded",
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/vulnerabilities/xss_s/",
+      "content-length": "48"
+    },
+    "cookies": {
+      "PHPSESSID": "uplggsvrp61n2gpgah88fpgrq7",
+      "security": "low"
+    },
+    "request_body": "txtName=ZAP&mtxMessage=&btnClear=Clear+Guestbook",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Wed, 08 Jul 2026 13:36:31 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Tue, 23 Jun 2009 12:00:00 GMT",
+      "cache-control": "no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "vary": "Accept-Encoding",
+      "content-length": "4901",
+      "content-type": "text/html;charset=utf-8"
+    },
+    "response_body": "\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\r\n\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n\r\n\t<head>\r\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n\r\n\t\t<title>Vulnerability: Stored Cross Site Scripting (XSS) :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*</title>\r\n\r\n\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"../../dvwa/css/main.css\" />\r\n\r\n\t\t<link rel=\"icon\" type=\"\\image/ico\" href=\"../../favicon.ico\" />\r\n\r\n\t\t<script type=\"text/javascript\" src=\"../../dvwa/js/dvwaPage.js\"></script>\r\n\r\n\t</head>\r\n\r\n\t<body class=\"home\">\r\n\t\t<div id=\"container\">\r\n\r\n\t\t\t<div id=\"header\">\r\n\r\n\t\t\t\t<img src=\"../../dvwa/images/logo.png\" alt=\"Damn Vulnerable Web Application\" />\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_menu\">\r\n\r\n\t\t\t\t<div id=\"main_menu_padded\">\r\n\t\t\t\t<ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../.\">Home</a></li>\n<li class=\"\"><a href=\"../../instructions.php\">Instructions</a></li>\n<li class=\"\"><a href=\"../../setup.php\">Setup / Reset DB</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../vulnerabilities/brute/\">Brute Force</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/exec/\">Command Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csrf/\">CSRF</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/fi/.?page=include.php\">File Inclusion</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/upload/\">File Upload</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/captcha/\">Insecure CAPTCHA</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli/\">SQL Injection</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/sqli_blind/\">SQL Injection (Blind)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/weak_id/\">Weak Session IDs</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_d/\">XSS (DOM)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/xss_r/\">XSS (Reflected)</a></li>\n<li class=\"selected\"><a href=\"../../vulnerabilities/xss_s/\">XSS (Stored)</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/csp/\">CSP Bypass</a></li>\n<li class=\"\"><a href=\"../../vulnerabilities/javascript/\">JavaScript</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../security.php\">DVWA Security</a></li>\n<li class=\"\"><a href=\"../../phpinfo.php\">PHP Info</a></li>\n<li class=\"\"><a href=\"../../about.php\">About</a></li>\n</ul><ul class=\"menuBlocks\"><li class=\"\"><a href=\"../../logout.php\">Logout</a></li>\n</ul>\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"main_body\">\r\n\r\n\t\t\t\t\r\n<div class=\"body_padded\">\r\n\t<h1>Vulnerability: Stored Cross Site Scripting (XSS)</h1>\r\n\r\n\t<div class=\"vulnerable_code_area\">\r\n\t\t<form method=\"post\" name=\"guestform\" \">\r\n\t\t\t<table width=\"550\" border=\"0\" cellpadding=\"2\" cellspacing=\"1\">\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Name *</td>\r\n\t\t\t\t\t<td><input name=\"txtName\" type=\"text\" size=\"30\" maxlength=\"10\"></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">Message *</td>\r\n\t\t\t\t\t<td><textarea name=\"mtxMessage\" cols=\"50\" rows=\"3\" maxlength=\"50\"></textarea></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td width=\"100\">&nbsp;</td>\r\n\t\t\t\t\t<td>\r\n\t\t\t\t\t\t<input name=\"btnSign\" type=\"submit\" value=\"Sign Guestbook\" onclick=\"return validateGuestbookForm(this.form);\" />\r\n\t\t\t\t\t\t<input name=\"btnClear\" type=\"submit\" value=\"Clear Guestbook\" onClick=\"return confirmClearGuestbook();\" />\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\n\r\n\t\t</form>\r\n\t\t\r\n\t</div>\r\n\t<br />\r\n\r\n\t\r\n\t<br />\r\n\r\n\t<h2>More Information</h2>\r\n\t<ul>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)\" target=\"_blank\">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>\r\n\t\t<li><a href=\"https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet\" target=\"_blank\">https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet</a></li>\r\n\t\t<li><a href=\"https://en.wikipedia.org/wiki/Cross-site_scripting\" target=\"_blank\">https://en.wikipedia.org/wiki/Cross-site_scripting</a></li>\r\n\t\t<li><a href=\"http://www.cgisecurity.com/xss-faq.html\" target=\"_blank\">http://www.cgisecurity.com/xss-faq.html</a></li>\r\n\t\t<li><a href=\"http://www.scriptalert1.com/\" target=\"_blank\">http://www.scriptalert1.com/</a></li>\r\n\t</ul>\r\n</div>\n\r\n\t\t\t\t<br /><br />\r\n\t\t\t\t\r\n\r\n\t\t\t</div>\r\n\r\n\t\t\t<div class=\"clear\">\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"system_info\">\r\n\t\t\t\t<input type=\"button\" value=\"View Help\" class=\"popup_button\" id='help_button' data-help-url='../../vulnerabilities/view_help.php?id=xss_s&security=low' )\"> <input type=\"button\" value=\"View Source\" class=\"popup_button\" id='source_button' data-source-url='../../vulnerabilities/view_source.php?id=xss_s&security=low' )\"> <div align=\"left\"><em>Username:</em> admin<br /><em>Security Level:</em> low<br /><em>PHPIDS:</em> enabled</div>\r\n\t\t\t</div>\r\n\r\n\t\t\t<div id=\"footer\">\r\n\r\n\t\t\t\t<p>Damn Vulnerable Web Application (DVWA) v1.10 *Development*</p>\r\n\t\t\t\t<script src='/dvwa/js/add_event_listeners.js'></script>\r\n\r\n\t\t\t</div>\r\n\r\n\t\t</div>\r\n\r\n\t</body>\r\n\r\n</html>"
+  }
+]

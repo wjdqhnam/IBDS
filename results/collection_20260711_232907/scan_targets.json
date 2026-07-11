@@ -1,0 +1,292 @@
+[
+  {
+    "zap_message_id": "4",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/login.php",
+    "base_url": "http://host.docker.internal:8080/login.php",
+    "param_location": "body",
+    "params": {
+      "username": "admin",
+      "password": "password",
+      "Login": "Login"
+    },
+    "scannable_params": [
+      "username",
+      "password",
+      "Login"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded; charset=utf-8",
+      "content-length": "44"
+    },
+    "cookies": {
+      "PHPSESSID": "uhkuoj7k19b8ojv4tfo2gbf2v1",
+      "security": "low"
+    },
+    "request_body": "username=admin&password=password&Login=Login",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:23:45 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "login.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "30",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/login.php",
+    "base_url": "http://host.docker.internal:8080/login.php",
+    "param_location": "body",
+    "params": {
+      "username": "ZAP",
+      "password": "ZAP",
+      "Login": "Login",
+      "user_token": "8501b296a5b7557f603b8ee7005ad953"
+    },
+    "scannable_params": [
+      "username",
+      "password",
+      "Login"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/login.php",
+      "content-length": "81"
+    },
+    "cookies": {
+      "PHPSESSID": "m78i8nk6f4eep42ttlu33097o2",
+      "security": "low"
+    },
+    "request_body": "username=ZAP&password=ZAP&Login=Login&user_token=8501b296a5b7557f603b8ee7005ad953",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:23:47 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "login.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  },
+  {
+    "zap_message_id": "77",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/dvwa/css/?C=N;O=D",
+    "base_url": "http://host.docker.internal:8080/dvwa/css/",
+    "param_location": "query",
+    "params": {
+      "C": "N;O=D"
+    },
+    "scannable_params": [
+      "C"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/dvwa/css/"
+    },
+    "cookies": {
+      "PHPSESSID": "oq8cth8d6h7gva2b7t44mok8v1",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:25:47 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "vary": "Accept-Encoding",
+      "content-length": "1542",
+      "content-type": "text/html;charset=UTF-8"
+    },
+    "response_body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /dvwa/css</title>\n </head>\n <body>\n<h1>Index of /dvwa/css</h1>\n  <table>\n   <tr><th valign=\"top\"><img src=\"/icons/blank.gif\" alt=\"[ICO]\"></th><th><a href=\"?C=N;O=A\">Name</a></th><th><a href=\"?C=M;O=A\">Last modified</a></th><th><a href=\"?C=S;O=A\">Size</a></th><th><a href=\"?C=D;O=A\">Description</a></th></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n<tr><td valign=\"top\"><img src=\"/icons/back.gif\" alt=\"[PARENTDIR]\"></td><td><a href=\"/dvwa/\">Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/text.gif\" alt=\"[TXT]\"></td><td><a href=\"source.css\">source.css</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">240 </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/text.gif\" alt=\"[TXT]\"></td><td><a href=\"main.css\">main.css</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">3.9K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/text.gif\" alt=\"[TXT]\"></td><td><a href=\"login.css\">login.css</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">842 </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/text.gif\" alt=\"[TXT]\"></td><td><a href=\"help.css\">help.css</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">304 </td><td>&nbsp;</td></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n</table>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n"
+  },
+  {
+    "zap_message_id": "79",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/dvwa/images/?C=N;O=D",
+    "base_url": "http://host.docker.internal:8080/dvwa/images/",
+    "param_location": "query",
+    "params": {
+      "C": "N;O=D"
+    },
+    "scannable_params": [
+      "C"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/dvwa/images/"
+    },
+    "cookies": {
+      "PHPSESSID": "oq8cth8d6h7gva2b7t44mok8v1",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:25:47 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "vary": "Accept-Encoding",
+      "content-length": "2180",
+      "content-type": "text/html;charset=UTF-8"
+    },
+    "response_body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /dvwa/images</title>\n </head>\n <body>\n<h1>Index of /dvwa/images</h1>\n  <table>\n   <tr><th valign=\"top\"><img src=\"/icons/blank.gif\" alt=\"[ICO]\"></th><th><a href=\"?C=N;O=A\">Name</a></th><th><a href=\"?C=M;O=A\">Last modified</a></th><th><a href=\"?C=S;O=A\">Size</a></th><th><a href=\"?C=D;O=A\">Description</a></th></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n<tr><td valign=\"top\"><img src=\"/icons/back.gif\" alt=\"[PARENTDIR]\"></td><td><a href=\"/dvwa/\">Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"warning.png\">warning.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">423 </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"spanner.png\">spanner.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">464 </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"logo.png\">logo.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">4.9K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"login_logo.png\">login_logo.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">8.9K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"lock.png\">lock.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">761 </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"dollar.png\">dollar.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">299 </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/image2.gif\" alt=\"[IMG]\"></td><td><a href=\"RandomStorm.png\">RandomStorm.png</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">4.4K</td><td>&nbsp;</td></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n</table>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n"
+  },
+  {
+    "zap_message_id": "80",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/dvwa/?C=N;O=D",
+    "base_url": "http://host.docker.internal:8080/dvwa/",
+    "param_location": "query",
+    "params": {
+      "C": "N;O=D"
+    },
+    "scannable_params": [
+      "C"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/dvwa/"
+    },
+    "cookies": {
+      "PHPSESSID": "oq8cth8d6h7gva2b7t44mok8v1",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:25:47 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "vary": "Accept-Encoding",
+      "content-length": "1513",
+      "content-type": "text/html;charset=UTF-8"
+    },
+    "response_body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /dvwa</title>\n </head>\n <body>\n<h1>Index of /dvwa</h1>\n  <table>\n   <tr><th valign=\"top\"><img src=\"/icons/blank.gif\" alt=\"[ICO]\"></th><th><a href=\"?C=N;O=A\">Name</a></th><th><a href=\"?C=M;O=A\">Last modified</a></th><th><a href=\"?C=S;O=A\">Size</a></th><th><a href=\"?C=D;O=A\">Description</a></th></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n<tr><td valign=\"top\"><img src=\"/icons/back.gif\" alt=\"[PARENTDIR]\"></td><td><a href=\"/\">Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/folder.gif\" alt=\"[DIR]\"></td><td><a href=\"js/\">js/</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/folder.gif\" alt=\"[DIR]\"></td><td><a href=\"includes/\">includes/</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/folder.gif\" alt=\"[DIR]\"></td><td><a href=\"images/\">images/</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/folder.gif\" alt=\"[DIR]\"></td><td><a href=\"css/\">css/</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n</table>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n"
+  },
+  {
+    "zap_message_id": "159",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/dvwa/js/?C=N;O=D",
+    "base_url": "http://host.docker.internal:8080/dvwa/js/",
+    "param_location": "query",
+    "params": {
+      "C": "N;O=D"
+    },
+    "scannable_params": [
+      "C"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/dvwa/js/"
+    },
+    "cookies": {
+      "PHPSESSID": "oq8cth8d6h7gva2b7t44mok8v1",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:25:47 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "vary": "Accept-Encoding",
+      "content-length": "1186",
+      "content-type": "text/html;charset=UTF-8"
+    },
+    "response_body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /dvwa/js</title>\n </head>\n <body>\n<h1>Index of /dvwa/js</h1>\n  <table>\n   <tr><th valign=\"top\"><img src=\"/icons/blank.gif\" alt=\"[ICO]\"></th><th><a href=\"?C=N;O=A\">Name</a></th><th><a href=\"?C=M;O=A\">Last modified</a></th><th><a href=\"?C=S;O=A\">Size</a></th><th><a href=\"?C=D;O=A\">Description</a></th></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n<tr><td valign=\"top\"><img src=\"/icons/back.gif\" alt=\"[PARENTDIR]\"></td><td><a href=\"/dvwa/\">Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/unknown.gif\" alt=\"[   ]\"></td><td><a href=\"dvwaPage.js\">dvwaPage.js</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">1.0K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/unknown.gif\" alt=\"[   ]\"></td><td><a href=\"add_event_listeners.js\">add_event_listeners.js</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">593 </td><td>&nbsp;</td></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n</table>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n"
+  },
+  {
+    "zap_message_id": "162",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/dvwa/includes/?C=N;O=D",
+    "base_url": "http://host.docker.internal:8080/dvwa/includes/",
+    "param_location": "query",
+    "params": {
+      "C": "N;O=D"
+    },
+    "scannable_params": [
+      "C"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/dvwa/includes/"
+    },
+    "cookies": {
+      "PHPSESSID": "oq8cth8d6h7gva2b7t44mok8v1",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:25:47 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "vary": "Accept-Encoding",
+      "content-length": "1390",
+      "content-type": "text/html;charset=UTF-8"
+    },
+    "response_body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /dvwa/includes</title>\n </head>\n <body>\n<h1>Index of /dvwa/includes</h1>\n  <table>\n   <tr><th valign=\"top\"><img src=\"/icons/blank.gif\" alt=\"[ICO]\"></th><th><a href=\"?C=N;O=A\">Name</a></th><th><a href=\"?C=M;O=A\">Last modified</a></th><th><a href=\"?C=S;O=A\">Size</a></th><th><a href=\"?C=D;O=A\">Description</a></th></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n<tr><td valign=\"top\"><img src=\"/icons/back.gif\" alt=\"[PARENTDIR]\"></td><td><a href=\"/dvwa/\">Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/unknown.gif\" alt=\"[   ]\"></td><td><a href=\"dvwaPhpIds.inc.php\">dvwaPhpIds.inc.php</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">2.8K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/unknown.gif\" alt=\"[   ]\"></td><td><a href=\"dvwaPage.inc.php\">dvwaPage.inc.php</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\"> 20K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/folder.gif\" alt=\"[DIR]\"></td><td><a href=\"DBMS/\">DBMS/</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n</table>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n"
+  },
+  {
+    "zap_message_id": "208",
+    "method": "GET",
+    "url": "http://host.docker.internal:8080/dvwa/includes/DBMS/?C=N;O=D",
+    "base_url": "http://host.docker.internal:8080/dvwa/includes/DBMS/",
+    "param_location": "query",
+    "params": {
+      "C": "N;O=D"
+    },
+    "scannable_params": [
+      "C"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "referer": "http://host.docker.internal:8080/dvwa/includes/DBMS/"
+    },
+    "cookies": {
+      "PHPSESSID": "oq8cth8d6h7gva2b7t44mok8v1",
+      "security": "low"
+    },
+    "request_body": "",
+    "response_status": 200,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 14:25:48 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "vary": "Accept-Encoding",
+      "content-length": "1187",
+      "content-type": "text/html;charset=UTF-8"
+    },
+    "response_body": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /dvwa/includes/DBMS</title>\n </head>\n <body>\n<h1>Index of /dvwa/includes/DBMS</h1>\n  <table>\n   <tr><th valign=\"top\"><img src=\"/icons/blank.gif\" alt=\"[ICO]\"></th><th><a href=\"?C=N;O=A\">Name</a></th><th><a href=\"?C=M;O=A\">Last modified</a></th><th><a href=\"?C=S;O=A\">Size</a></th><th><a href=\"?C=D;O=A\">Description</a></th></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n<tr><td valign=\"top\"><img src=\"/icons/back.gif\" alt=\"[PARENTDIR]\"></td><td><a href=\"/dvwa/includes/\">Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/unknown.gif\" alt=\"[   ]\"></td><td><a href=\"PGSQL.php\">PGSQL.php</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">3.4K</td><td>&nbsp;</td></tr>\n<tr><td valign=\"top\"><img src=\"/icons/unknown.gif\" alt=\"[   ]\"></td><td><a href=\"MySQL.php\">MySQL.php</a></td><td align=\"right\">2018-10-12 17:44  </td><td align=\"right\">4.7K</td><td>&nbsp;</td></tr>\n   <tr><th colspan=\"5\"><hr></th></tr>\n</table>\n<address>Apache/2.4.25 (Debian) Server at host.docker.internal Port 8080</address>\n</body></html>\n"
+  }
+]

@@ -1,0 +1,880 @@
+[
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/captcha/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "step",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "1"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "password_new",
+        "request_location": "body",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password_conf",
+        "request_location": "body",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Change",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Change"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "account_modification"
+    ],
+    "skip_reason": "risk_tags: account_modification",
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/sqli/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "id",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Submit",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "query",
+        "field_type": "hidden",
+        "sample_values": [
+          "c3d71a46713112636f005dc5a0219bef",
+          "b0e56a8cf136598008a53d8a324a3395",
+          "f92a4d3e466e6792bcb80c3be6ba22e4",
+          "e3b1483b9c375dc9d343f3085d031700",
+          "2f08c54efb8b5996b6b1ce78a2149890",
+          "cb393a3486ebdff2a51cf0bff734cbb0",
+          "4651462e1fc1fb46564f08b455606375",
+          "ec5520d92abdd15758b707e4da0ad46a",
+          "ce1022e7fdf5f78e7ee744c34b0d4e5e",
+          "7d21255acae4d555ace9d460bee01b56",
+          "fd468a75b43472b4df49e653a3419afc",
+          "a96e0ed3a2d51aee7afdfb56afb2790e",
+          "2bc8d90f4aef8c4bbfbf9cb6b36fe65e",
+          "c352e9543d392f65d638ab5c929d524c",
+          "e0211cefdbd655edd7dcda04dddb4542",
+          "57df4a0e702a6322791dfbec48eea01a",
+          "2cb22a90e3a6836f26cf87136f2454da"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/brute/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "username",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password",
+        "request_location": "body",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Login",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Login"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "dbb56b834dc7330865d2db83b7b2a6ae"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/ids_log.php",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "clear_log",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Clear Log"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "state_changing_action"
+    ],
+    "skip_reason": "risk_tags: state_changing_action",
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_r/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "name",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "user_token",
+        "request_location": "query",
+        "field_type": "hidden",
+        "sample_values": [
+          "8a44711d78bbeda99ff5fc5f90bf87da",
+          "4c90e9bf361031e9d0434a1400520fcc",
+          "ed9d2f0c8c3ad2c2fe1a1626c95dee10",
+          "6ad20b489905387fd1bb841809e344c0",
+          "223ad72f3854e75aa5e1149c89e1cdd3",
+          "c09d264d423e1470373730d254d26635",
+          "dacf9b4f6520975163bbd3d816f6653c",
+          "84ceb7270d7f2f776d8e703ba9d82f59",
+          "a875a3ff6f1da86be5b41bba0973e241",
+          "94ac8c5c2a4e06cb842b9d2496584c4b",
+          "520bf6d59c75a79c812ccdfd5e4dd377",
+          "8d35e84e0aa606387973ce3e625e99ec",
+          "68fabe51c60da8d567c0eb0713d56539",
+          "f3795abcfca8c60bee51262e3b44b15c",
+          "d9f53835fb86b37c0dc83bf3c1dab2f8",
+          "9c0143e81918a1f29ca7a863bc6b39b0"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/upload/",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "parameters": [
+      {
+        "name": "MAX_FILE_SIZE",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "100000"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "uploaded",
+        "request_location": "body",
+        "field_type": "file",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "Upload",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Upload"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "file_upload"
+    ],
+    "skip_reason": "risk_tags: file_upload",
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/brute/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "username",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Login",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Login"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/exec/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "ip",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Submit",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/javascript/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "phrase",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          "ChangeMe"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "send",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/security.php",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "security",
+        "request_location": "body",
+        "field_type": "select",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "seclev_submit",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "749729c3233477db53cfeda7c3342c4a",
+          "3cdf309b3b56ef3ec5b3e8f479d1e040",
+          "16d60fc6af1bf026149fd5e8474b9af3"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/csrf/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "password_new",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "password_conf",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Change",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Change"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "password_current",
+        "request_location": "query",
+        "field_type": "password",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "user_token",
+        "request_location": "query",
+        "field_type": "hidden",
+        "sample_values": [
+          "e58eb16280a200a747cdf0b8de3a31f7",
+          "d40761dcb27f4f7ce04de2dd5c926b41",
+          "12409831609a028221241077b3b39b40",
+          "6451491f9b7dcf6418ef3d53c24c5066",
+          "7fd0811bc8faacd12194420bd180fb1d",
+          "9da6d96b0fed96ad1f06f3cbda2bd284",
+          "b8d31be63b17de2a90acc57c1a7629a0",
+          "4c2be82bf576cb7ccff3529daf3e4d88",
+          "a53dd34f16ea1f2cb5bb399899ced379",
+          "dbbf76d1a441d012f47fbe45896ea1d7",
+          "4f7356e498758a8dcb9360430af510f9",
+          "04c4547d5c6b1bea3255d2d5193792b6",
+          "65a0e36182ea50bf12199809f07a1efc",
+          "3dff71446d58cfc503e660e59c51b81e",
+          "8a018284a0964d33a546658b06e6ec2f",
+          "1a6b6f58286c4702aae00463db8043db",
+          "bb51a4e835bd488a02e06b6b2e009e86"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "account_modification"
+    ],
+    "skip_reason": "risk_tags: account_modification",
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/csp/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "include",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/setup.php",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "create_db",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Create / Reset Database"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "body",
+        "field_type": "hidden",
+        "sample_values": [
+          "151f0e66552224010e9bd57fe55ab045"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "setup",
+      "state_changing_action"
+    ],
+    "skip_reason": "risk_tags: setup,state_changing_action",
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "method": "POST",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "txtName",
+        "request_location": "body",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "mtxMessage",
+        "request_location": "body",
+        "field_type": "textarea",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "btnSign",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Sign Guestbook"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "btnClear",
+        "request_location": "body",
+        "field_type": "submit",
+        "sample_values": [
+          "Clear Guestbook"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": false,
+    "risk_tags": [
+      "state_changing_action"
+    ],
+    "skip_reason": "risk_tags: state_changing_action",
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/xss_d/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "default",
+        "request_location": "query",
+        "field_type": "select",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  },
+  {
+    "role": "guest",
+    "base_url": "http://localhost:8080/vulnerabilities/sqli_blind/",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "parameters": [
+      {
+        "name": "id",
+        "request_location": "query",
+        "field_type": "text",
+        "sample_values": [
+          ""
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": true
+      },
+      {
+        "name": "Submit",
+        "request_location": "query",
+        "field_type": "submit",
+        "sample_values": [
+          "Submit"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      },
+      {
+        "name": "user_token",
+        "request_location": "query",
+        "field_type": "hidden",
+        "sample_values": [
+          "1e1d0f078a0e4a163f4324996c1577aa",
+          "fd9d5b77965d04762e6e42b7aed939c6",
+          "9dff31ab37b58e2155627b6a28164b10",
+          "fab03ebc91efc2f2ae093444466caf8d",
+          "5a1a7feacd48773e18867ebd032e1c9f",
+          "12adaff005e93721c03648be59a13fb6",
+          "7be91a41cff6b4eacf548313f0288127",
+          "cec3046f01a801d49f353391f0c110d1",
+          "323a78c0e01ef2008aa30c8f4ad3a578",
+          "bbc572c0e757b12834550f8b6b2f477a",
+          "7661dc3dbe7b26c08dab7ea917ffd6a1",
+          "bf629b79f3508ba319c58f46b80c552d",
+          "561472ae81a8e7e926ccfba5dc0cf87a",
+          "bc33f2866cfc78a287fe92596e87b8fa",
+          "9c4d649bfda8e84ad1c6a72906dacc2e",
+          "75e904849f845c558f493f80fbca5547",
+          "91884279e7d005c8cd5818a20a5c7c42"
+        ],
+        "sources": [
+          "crawl"
+        ],
+        "scan": false
+      }
+    ],
+    "cookies": {},
+    "headers": {},
+    "sources": [
+      "crawl"
+    ],
+    "can_scan": true,
+    "risk_tags": [],
+    "skip_reason": null,
+    "seen_requests": []
+  }
+]

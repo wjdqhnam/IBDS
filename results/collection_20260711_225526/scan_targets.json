@@ -1,0 +1,46 @@
+[
+  {
+    "zap_message_id": "24",
+    "method": "POST",
+    "url": "http://host.docker.internal:8080/login.php",
+    "base_url": "http://host.docker.internal:8080/login.php",
+    "param_location": "body",
+    "params": {
+      "username": "ZAP",
+      "password": "ZAP",
+      "Login": "Login",
+      "user_token": "f42ab0ca4130d98dc19113a7640fdfcb"
+    },
+    "scannable_params": [
+      "username",
+      "password",
+      "Login"
+    ],
+    "headers": {
+      "host": "host.docker.internal:8080",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "pragma": "no-cache",
+      "cache-control": "no-cache",
+      "content-type": "application/x-www-form-urlencoded",
+      "referer": "http://host.docker.internal:8080/login.php",
+      "content-length": "81"
+    },
+    "cookies": {
+      "PHPSESSID": "0n58rd9f51t4s1aeslsda89ft7",
+      "security": "low"
+    },
+    "request_body": "username=ZAP&password=ZAP&Login=Login&user_token=f42ab0ca4130d98dc19113a7640fdfcb",
+    "response_status": 302,
+    "response_headers": {
+      "date": "Sat, 11 Jul 2026 13:55:29 GMT",
+      "server": "Apache/2.4.25 (Debian)",
+      "expires": "Thu, 19 Nov 1981 08:52:00 GMT",
+      "cache-control": "no-store, no-cache, must-revalidate",
+      "pragma": "no-cache",
+      "location": "login.php",
+      "content-length": "0",
+      "content-type": "text/html; charset=UTF-8"
+    },
+    "response_body": ""
+  }
+]

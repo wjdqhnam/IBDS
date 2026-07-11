@@ -1,0 +1,4 @@
+{
+  "target_url": "http://host.docker.internal:8080",
+  "scan_url": "http://localhost:8080"
+}

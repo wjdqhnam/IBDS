@@ -1,0 +1,12 @@
+{
+  "session_id": "session_20260626_222540",
+  "capture_id": "capture_20260626_222441",
+  "target_url": "http://localhost:8080",
+  "proxy": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 8081
+  },
+  "started_at": "2026-06-26T13:25:40.735276+00:00",
+  "finished_at": "2026-06-26T13:25:52.865332+00:00"
+}

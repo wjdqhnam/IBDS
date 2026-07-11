@@ -1,0 +1,686 @@
+[
+  {
+    "vuln_type": "SQLI",
+    "method": "error_based",
+    "confidence": "confirmed",
+    "url": "http://localhost:8080/vulnerabilities/sqli/",
+    "param": "id",
+    "payload": "'(",
+    "payload_type": "SQLI_ERROR_META",
+    "payload_family": "sq_paren",
+    "evidence": "DB 에러 노출 [MySQL]: 'you have an error in your sql syntax'",
+    "elapsed": 0.014,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 10,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "error_based",
+    "confidence": "confirmed",
+    "url": "http://localhost:8080/vulnerabilities/brute/",
+    "param": "username",
+    "payload": "'(",
+    "payload_type": "SQLI_ERROR_META",
+    "payload_family": "sq_paren",
+    "evidence": "DB 에러 노출 [MySQL]: 'you have an error in your sql syntax'",
+    "elapsed": 0.027,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 12,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/fi/",
+    "param": "page",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.035,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 0,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/instructions.php",
+    "param": "doc",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.014,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 1,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/security.php",
+    "param": "phpids",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.01,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 2,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/captcha/",
+    "param": "step",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.017,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 3,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/captcha/",
+    "param": "password_new",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.451,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 3,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/captcha/",
+    "param": "password_conf",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.422,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 3,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/captcha/",
+    "param": "Change",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.431,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 3,
+      "param_index": 3,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/upload/",
+    "param": "MAX_FILE_SIZE",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.014,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 4,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/upload/",
+    "param": "uploaded",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.013,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 4,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/upload/",
+    "param": "Upload",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.011,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 4,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "param": "txtName",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 2개 / false 2개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.058,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 5,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "param": "mtxMessage",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 2개 / false 2개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.052,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 5,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "param": "btnClear",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.043,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 5,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/xss_d/",
+    "param": "default",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.015,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 6,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/xss_r/",
+    "param": "name",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.013,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 7,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/javascript/",
+    "param": "phrase",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.048,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 8,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/javascript/",
+    "param": "send",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.045,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 8,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/security.php",
+    "param": "test",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.006,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 9,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/sqli/",
+    "param": "Submit",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.014,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 10,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/sqli/",
+    "param": "id",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.015,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 10,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/exec/",
+    "param": "ip",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 8.55,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 11,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/brute/",
+    "param": "Login",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 4.41,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 12,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/brute/",
+    "param": "password",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.017,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 12,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/brute/",
+    "param": "username",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.017,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 12,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/sqli_blind/",
+    "param": "Submit",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.017,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 13,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/sqli_blind/",
+    "param": "id",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.016,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 13,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/csrf/",
+    "param": "Change",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.016,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 14,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/csrf/",
+    "param": "password_conf",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.014,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 14,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/csrf/",
+    "param": "password_new",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.015,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 14,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/xss_s/",
+    "param": "btnSign",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.022,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 15,
+      "param_index": 2,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/security.php",
+    "param": "security",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.046,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 16,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/security.php",
+    "param": "seclev_submit",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.053,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 16,
+      "param_index": 1,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/vulnerabilities/csp/",
+    "param": "include",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.015,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 17,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  },
+  {
+    "vuln_type": "SQLI",
+    "method": "boolean",
+    "confidence": "candidate",
+    "url": "http://localhost:8080/ids_log.php",
+    "param": "clear_log",
+    "payload": " AND 1=1 -- ",
+    "payload_type": "SQLI_BOOLEAN",
+    "payload_family": "and_int_cmt_true",
+    "evidence": "Boolean SQLi candidate (true): pos 1개 / false 1개, 응답 동일 (diff=0.0%)",
+    "elapsed": 0.013,
+    "status": 200,
+    "meta": {
+      "role": "guest",
+      "target_index": 18,
+      "param_index": 0,
+      "vuln_scan": "sqli"
+    }
+  }
+]

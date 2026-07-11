@@ -1,0 +1,7 @@
+{
+  "ajax_spider_enabled": false,
+  "ajax_spider_status": null,
+  "ajax_spider_completed": null,
+  "ajax_spider_timeout": 300,
+  "ajax_spider_elapsed_seconds": null
+}

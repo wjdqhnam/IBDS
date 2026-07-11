@@ -1,0 +1,44 @@
+[
+  {
+    "url": "http://localhost:8080/",
+    "status_code": 200,
+    "forms": [
+      {
+        "action": "http://localhost:8080/login.php",
+        "method": "POST",
+        "fields": [
+          {
+            "name": "username",
+            "field_type": "text",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "password",
+            "field_type": "password",
+            "value": "",
+            "options": []
+          },
+          {
+            "name": "Login",
+            "field_type": "submit",
+            "value": "Login",
+            "options": []
+          },
+          {
+            "name": "user_token",
+            "field_type": "hidden",
+            "value": "2350dc6c4f68c4ad66916a4f2aeb1ba1",
+            "options": []
+          }
+        ],
+        "enctype": "application/x-www-form-urlencoded"
+      }
+    ],
+    "links": [],
+    "danger_links": [],
+    "query_params": {},
+    "page_title": "Login :: Damn Vulnerable Web Application (DVWA) v1.10 *Development*",
+    "is_error_page": false
+  }
+]
