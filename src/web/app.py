@@ -31,7 +31,7 @@ async def lifespan(app):
     manager.stop()
 
 
-app = FastAPI(title="IBDS Local", lifespan=lifespan)
+app = FastAPI(title="Biscan Local", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=STATIC), name="static")
 
 
@@ -40,7 +40,7 @@ app.mount("/static", StaticFiles(directory=STATIC), name="static")
 async def local_only(request: Request, call_next):
     if request.headers.get("host", "").split(":")[0] not in {"127.0.0.1", "localhost", "testserver"}:
         return JSONResponse({"detail": "로컬 주소로 접속하세요."}, status_code=403)
-    if request.method == "POST" and request.headers.get("x-ibds-client") != "local-ui":
+    if request.method == "POST" and request.headers.get("x-Biscan-client") != "local-ui":
         return JSONResponse({"detail": "웹 화면에서 요청하세요."}, status_code=403)
     response = await call_next(request)
     response.headers["Cache-Control"] = "no-store"

@@ -5,10 +5,9 @@ ver2 오케스트레이터.
 import io
 import json
 import os
-import re
 import sys
 from dataclasses import asdict, replace
-from urllib.parse import parse_qs, urljoin, urlparse
+from urllib.parse import urljoin, urlparse
 
 for _stream in (sys.stdout, sys.stderr):
     if isinstance(_stream, io.TextIOWrapper):
@@ -38,8 +37,6 @@ from analyzer.sqli_detector import analyze_family
 
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _TARGET_CONFIG = os.path.join(_PROJECT_ROOT, "config", "target_config.json")
-_MAX_SWEEP_VARIANTS = 10  # 경로 하나당 sweep에 더할 값 변형 주소 상한
-_CLEAN_VALUE = re.compile(r"^[\w.@-]*$")  # 공격 문자 없는 쿼리 값만 sweep 변형으로 허용
 
 
 # delivery_unknown case의 판정 대체 기록
@@ -110,10 +107,7 @@ def _suffix_family_id(family: RequestFamily, suffix: str) -> None:
         case.case_id = case.case_id.replace(old, family.family_id, 1)
 
 
-# 저장 출력 위치 탐색(sweep)용 수집된 GET 주소와 그 주소를 수집한 타겟 목록 (파괴적 액션 타겟 제외)
-# 저장형 출력 위치 후보 GET 페이지 목록 (url, 그 페이지를 수집한 target)
-# 요청을 보내기 전에 거른다 - 외부 호스트와 로그아웃·삭제 같은 위험 주소는 훑지 않는다
-# 파라미터 없는 /logout 같은 GET은 has_destructive_action(값만 봄)으로 못 거르므로 URL 경로도 본다
+# sweep용 수집 GET 주소 목록 (url, 수집한 target), 외부 호스트와 로그아웃 삭제 같은 위험 URL은 경로까지 보고 제외
 def _sweep_pages(targets: list[dict], base_host: str) -> list[tuple[str, dict]]:
     pages: list[tuple[str, dict]] = []
     seen: set[str] = set()
@@ -132,44 +126,7 @@ def _sweep_pages(targets: list[dict], base_host: str) -> list[tuple[str, dict]]:
     return pages
 
 
-# sweep에 더할 수집 기록 GET 주소 - dedup으로 하나만 남은 값 변형(profile.php?user=X 등)을 되살림, 쿠키와 헤더는 같은 경로 target 것 사용
-def _sweep_variants(messages_path: str, pages: list[tuple[str, dict]]) -> list[tuple[str, dict]]:
-    if not os.path.exists(messages_path):
-        return []
-    with open(messages_path, encoding="utf-8") as f:
-        messages = json.load(f)
-    by_base = {_base_of(url): target for url, target in pages}  # 스캔 대상과 같은 경로만 허용
-    seen = {url for url, _ in pages}
-    per_base: dict[str, int] = {}
-    variants: list[tuple[str, dict]] = []
-    for msg in messages:
-        line = (msg.get("requestHeader") or "").split("\r\n", 1)[0].split(" ")
-        status = (msg.get("responseHeader") or "").split(" ", 2)
-        if len(line) < 2 or line[0] != "GET" or len(status) < 2 or not status[1].startswith("2"):
-            continue
-        url = line[1].split("#", 1)[0]
-        query = parse_qs(urlparse(url).query, keep_blank_values=True)
-        target = by_base.get(_base_of(url))
-        if not query or target is None or url in seen or has_destructive_action(query):
-            continue
-        if not all(_CLEAN_VALUE.match(v) and not v.lower().startswith("ibds") for vs in query.values() for v in vs):
-            continue  # 이전 스캔 공격 주소와 마커가 ZAP 기록에 남아 있어 깨끗한 값만 재조회
-        if per_base.get(_base_of(url), 0) >= _MAX_SWEEP_VARIANTS:
-            continue
-        per_base[_base_of(url)] = per_base.get(_base_of(url), 0) + 1
-        seen.add(url)
-        variants.append((url, target))
-    return variants
-
-
-def _base_of(url: str) -> str:
-    p = urlparse(url)
-    return f"{p.scheme}://{p.netloc}{p.path}"
-
-
-# 같은 폼의 지점은 서로 다른 묶음에 나눈다
-# 같은 폼의 다른 필드를 한 묶음에 넣으면 뒤 저장 요청이 앞 필드를 원래 값으로 덮어써 훑기 전에 마커가 사라진다
-# 같은 폼이 서로 다른 target_id로 중복 수집될 수 있어 target_id 대신 폼 서명(form_key, 보통 method+url)으로 가른다
+# 같은 폼의 지점은 다른 묶음으로 분리 (뒤 저장 요청이 앞 필드를 덮어써 마커가 사라짐), target_id 대신 form_key로 가름
 def _stored_batches(points: list[ScanPoint], form_key) -> list[list[ScanPoint]]:
     batches: list[list[ScanPoint]] = []
     for sp in points:
@@ -182,8 +139,7 @@ def _stored_batches(points: list[ScanPoint], form_key) -> list[list[ScanPoint]]:
     return batches
 
 
-# 스캔 전 저장형 사전 확인 - form 지점에 마커를 묶음으로 주입하고 수집 페이지를 함께 훑어 지점별 출력 위치를 정한다
-# 지점마다 모든 페이지를 훑으면 요청이 지점 수와 페이지 수의 곱만큼 늘어나서 묶음 단위로 한 번씩만 훑는다
+# 스캔 전 저장형 사전 확인 - form 지점에 마커를 묶음으로 주입하고 수집 페이지를 묶음 단위로 한 번씩 훑어 출력 위치 결정
 def _run_stored_probes(scan_points: list[ScanPoint], target_by_id: dict, zap, marker_factory,
                        sweep_pages: list[tuple[str, dict]], progress) -> dict:
     points = [sp for sp in scan_points
@@ -237,7 +193,7 @@ def _route_scan_point(sp: ScanPoint, target: dict, zap, stored_probes: dict | No
 
     try:
         if use_discovery:
-            xss_fail_reason = "discovery_failed"  # 사전 확인 실패는 반사 없음으로 넘기지 않고 검토 필요
+            xss_fail_reason = "discovery_failed"  # 사전 확인 실패는 반사 없음으로 넘기지 않고 판단 보류
             discovery = run_discovery(sp, target, zap)  # 특수문자가 반사되는 것들만 filtering.
             xss_fail_reason = "prepare_failed"
         else:
@@ -413,7 +369,6 @@ def run_pipeline(on_paths_ready=None, on_progress=None, should_stop=None, output
     scan_points += build_fragment_points(targets, scan_points)  # 스캔 지점 없는 GET 페이지는 DOM hash 검사용 지점 1개
     base_host = urlparse(load_json(_TARGET_CONFIG, default={}).get("target_url", "")).netloc  # 훑기 외부 호스트 제외 기준
     sweep_pages = _sweep_pages(targets, base_host)  # 저장형 출력 위치 탐색 후보 (form 지점 마커를 묶음마다 함께 찾음)
-    sweep_pages += _sweep_variants(os.path.join(out_dir, "zap_messages.json"), sweep_pages)
     progress.total = len(scan_points)
     progress.publish()
 

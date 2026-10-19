@@ -33,8 +33,8 @@ class DiscoveryFilterStat:
         }
 
 _CANDIDATE_SPECIALS = ["<", ">", '"', "'", "=", "(", ")", "/", "\\", "`"]
-_SPECIALS_MARK_START = "ibdsA"
-_SPECIALS_MARK_END = "ibdsZ"
+_SPECIALS_MARK_START = "BiscanA"
+_SPECIALS_MARK_END = "BiscanZ"
 _TRUNC_GUARD = "qz" 
 _RAW_TEXT_TAGS = {"textarea", "title", "noscript", "xmp"}
 _SUPPRESSED_TAGS = {"plaintext"}
@@ -45,7 +45,7 @@ _TOKEN_RE = re.compile(r"[0-9A-Za-z가-힣]+|[^0-9A-Za-z가-힣]+")  # 값 덩�
 
 
 def probe_reflected(sp: ScanPoint, target: dict, zap) -> tuple[bool, str]:
-    marker = f"ibdsreflect{sp.target_id}{sp.tag}"
+    marker = f"Biscanreflect{sp.target_id}{sp.tag}"
     case = build_mutation_case(
         target, sp.location, sp.name, sp.original_value, marker + _TRUNC_GUARD,
         "discovery_reflect", f"{sp.target_id}_{sp.tag}_discovery_reflect",
@@ -168,7 +168,7 @@ def run_discovery(sp: ScanPoint, target: dict, zap) -> DiscoveryResult:
     reflected, body = probe_reflected(sp, target, zap)
     if not reflected:
         return DiscoveryResult(reflected=False, valid_specials=set())
-    marker = f"ibdsreflect{sp.target_id}{sp.tag}"
+    marker = f"Biscanreflect{sp.target_id}{sp.tag}"
     return DiscoveryResult(
         reflected=True,
         valid_specials=probe_specials(sp, target, zap),

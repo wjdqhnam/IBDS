@@ -13,7 +13,7 @@ try:
 except Exception:
     MutationCase = SinkProbeResult = None
 
-MARKER_PREFIX = "ibds"
+MARKER_PREFIX = "Biscan"
 REVISIT_MAX_RETRY = 3      # revisit_max_retry
 REVISIT_AWAIT_MS = 500     # revisit_await_ms
 
@@ -61,8 +61,7 @@ def _get_headers_for_revisit(target: dict) -> dict:
             if k.lower() not in ("content-type", "content-length")} # 원본 요청 헤더에서 POST 전용 헤더(Content-Type/Length) 제거
 
 
-# 마커 반사 프로브가 어디서 마커 반사를 할지 결정
-# 우선순위: 유저가 명시한 revisit_url → 동일 호스트 referer → base_url(그 파라미터가 나온곳) → target_url
+# 재조회 주소 결정 - 유저 지정 revisit_url, 동일 호스트 referer, base_url, target_url 순서
 def resolve_revisit_url(target: dict) -> str:
     if explicit := target.get("revisit_url"):
         return explicit
@@ -81,23 +80,20 @@ STORED_BATCH_SIZE = 20  # 마커를 몇 지점씩 묶어 주입하고 훑을지 
 _MAX_SWEEP_PAGES = 500  # 묶음마다 훑을 페이지 상한
 _STATIC_EXT = (".js", ".css", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".webp",
                ".woff", ".woff2", ".ttf", ".swf", ".map", ".pdf")
-_LOGIN_HINTS = ("login", "signin", "sign-in", "logon")
 
 
-# 재조회 응답이 유효한지 (403, 500 등은 마커가 없어도 미발견으로 볼 수 없음)
+# 저장 요청 응답 판정용 - 2xx와 3xx 유효 (저장 후 302 PRG가 정상 흐름)
 def _is_valid_status(status) -> bool:
     return isinstance(status, int) and 200 <= status < 400
 
 
-# 응답이 로그인 화면으로 이동했는지 - 가입 후 로그인 페이지 이동 같은 정상 흐름도 걸리므로 이것만으로 세션 만료로 보지 않음
-def _is_login_redirect(status, location_url: str | None) -> bool:
-    if not (isinstance(status, int) and 300 <= status < 400 and location_url):
-        return False
-    return any(h in urlparse(location_url).path.lower() for h in _LOGIN_HINTS)
+# 재조회 판정용 - 목적지 내용을 실제로 받은 2xx만 유효 (3xx는 followredirects=False라 껍데기, 4xx와 5xx는 오류)
+def _is_revisit_ok(status) -> bool:
+    return isinstance(status, int) and 200 <= status < 300
 
 
-# 재조회 GET 한 번 - (응답 본문, 응답 상태 코드, 로그인 화면으로 튕겼는지) 반환
-def _fetch(target: dict, url: str, requester, zap, case_id: str) -> tuple[str, int | None, bool]:
+# 재조회 GET 한 번 - (응답 본문, 응답 상태 코드) 반환
+def _fetch(target: dict, url: str, requester, zap, case_id: str) -> tuple[str, int | None]:
     get_case = MutationCase(
         case_id=case_id,
         step="probe_revisit",
@@ -109,30 +105,21 @@ def _fetch(target: dict, url: str, requester, zap, case_id: str) -> tuple[str, i
         body="",
     )
     resp = requester.send(get_case, zap)
-    status = resp.get("response_status")
-    location = (resp.get("response_headers") or {}).get("location")
-    bounced = _is_login_redirect(status, urljoin(url, location) if location else None)
-    return resp.get("response_body") or "", status, bounced
+    return resp.get("response_body") or "", resp.get("response_status")
 
 
-# 조회 응답을 마커 미발견 근거로 쓸 수 없으면 사유, 쓸 수 있으면 None
-# 2xx·3xx가 아니거나 로그인 화면으로 튕긴 응답은 세션이 끊겼을 수 있어 미발견 근거가 못 됨
-def _invalid_note(url: str, status, bounced: bool) -> str | None:
-    if not _is_valid_status(status):
-        return f"{url} ({status})"
-    if bounced:
-        return f"{url} ({status} 로그인 화면으로 이동)"
-    return None
+# 재조회 응답을 미발견 근거로 쓸 수 있으면 None, 2xx가 아니면 목적지를 못 받은 것이라 사유 반환
+def _invalid_note(url: str, status) -> str | None:
+    return None if _is_revisit_ok(status) else f"{url} ({status})"
 
 
-# 마커 반사 확인 - (마커 반사 여부, 조회가 무효면 사유 문자열 아니면 None)
+# 마커 반사 확인 - 2xx 본문에서 마커가 보여야 확정 (3xx 리다이렉트 본문 echo와 오류 페이지 오탐 차단)
 def _reflect_at(target: dict, url: str, marker: str, requester, zap, case_id: str) -> tuple[bool, str | None]:
-    body, status, bounced = _fetch(target, url, requester, zap, case_id)
-    return marker in body, _invalid_note(url, status, bounced)  # 본문 자체는 버림
+    body, status = _fetch(target, url, requester, zap, case_id)
+    return (_is_revisit_ok(status) and marker in body), _invalid_note(url, status)
 
 
-# 1단계 마커 주입 - marker로 param 값 교체해 POST 후 revisit_url(실패 시 base_url) GET으로 바로 확인
-# 다른 페이지 출력은 묶음이 끝난 뒤 sweep_markers가 함께 찾는다
+# 1단계 마커 주입 - param 값을 marker로 바꿔 POST 후 revisit_url 재조회로 확인, 다른 페이지 출력은 sweep_markers가 처리
 def probe_sink(sp, target: dict, marker: str, requester, zap):
     param = sp.name
     post_case = build_mutation_case(
@@ -148,10 +135,7 @@ def probe_sink(sp, target: dict, marker: str, requester, zap):
     sent = requester.send(post_case, zap)  # POST 응답 본문은 보지 않음(에코 오판 방지)
     post_status = sent.get("response_status")
 
-    # POST 응답 Location으로 동적 revisit_url 결정 (write.php처럼 매번 새 id가 생기는 경우 대응)
-    # 범위 밖(외부 호스트) Location은 따르지 않고 기존 정책(override/referer/base_url)으로 폴백 (af.md #8·#12)
-    # 유저가 명시한 revisit_url이 최우선 — PRG(저장 후 자기 자신으로 이동)처럼 Location이 출력 위치가 아닌 경우 대응
-    # 주소에 마커가 든 Location(/search?q=마커)은 보이는 마커가 저장이 아니라 반사라서 쓰지 않는다
+    # 동적 revisit_url 결정 - 유저 지정이 최우선, 그다음 같은 호스트 PRG Location, 마커 든 Location은 반사라 제외, 없으면 기존 정책
     location = (sent.get("response_headers") or {}).get("location")
     location_url = urljoin(post_case.url, location) if location else None
     if target.get("revisit_url"):
@@ -190,14 +174,10 @@ def probe_sink(sp, target: dict, marker: str, requester, zap):
         checked_urls=checked_urls,
         invalid_revisits=invalid_revisits,
         post_status=post_status,
-        login_redirect=_is_login_redirect(post_status, location_url),
     )
 
 
-# 2단계 묶음 공동 조회 - 묶음으로 주입한 마커를 수집 페이지에서 한꺼번에 찾아 지점별 출력 위치 연결표를 만든다
-# 페이지마다 GET 한 번만 보내 지점마다 전체를 훑는 것보다 요청을 줄인다 (ZAP Persistent XSS Spider 방식)
-# probes: (지점 target, probe_sink 결과) 목록. 결과 객체에 출력 위치와 조회 기록을 채운다
-# pages: (주소, 그 주소를 수집한 target) 목록 - 조회할 때 그 페이지를 수집한 요청의 헤더·쿠키를 쓴다
+# 2단계 묶음 공동 조회 - 수집 페이지를 한 번씩 훑어 어느 마커가 어디에 나오는지 지점별 출력 위치를 연결 (지점별 전체 훑기보다 요청 절감)
 def sweep_markers(probes: list, pages: list[tuple[str, dict]], requester, zap, batch_id: int) -> None:
     markers = [r.probe_marker for _, r in probes]
     targets = [(url, page_target) for url, page_target in pages
@@ -207,11 +187,11 @@ def sweep_markers(probes: list, pages: list[tuple[str, dict]], requester, zap, b
     checked, failed = 0, []
     for idx, (url, page_target) in enumerate(targets[:_MAX_SWEEP_PAGES]):
         try:
-            body, status, bounced = _fetch(page_target, url, requester, zap, case_id=f"probe_sweep_b{batch_id}_{idx}")
+            body, status = _fetch(page_target, url, requester, zap, case_id=f"probe_sweep_b{batch_id}_{idx}")
         except Exception as e:
             failed.append(f"{url} ({e})")
             continue
-        if invalid := _invalid_note(url, status, bounced):
+        if invalid := _invalid_note(url, status):
             failed.append(invalid)
             continue
         checked += 1
@@ -229,7 +209,7 @@ def sweep_markers(probes: list, pages: list[tuple[str, dict]], requester, zap, b
 
 # 3단계 저장형 사유 코드 결정
 def finalize_probe(r) -> tuple[str | None, str | None]:
-    if r.sink_confirmed: # 마커가 있는지 확인\
+    if r.sink_confirmed:  # 마커를 찾았으면 사유 없음
         return None, None
     # 출력 위치 확인부
     notes = []
@@ -237,8 +217,6 @@ def finalize_probe(r) -> tuple[str | None, str | None]:
         notes.append(f"저장 요청 응답 무효 ({r.post_status})")
     if r.invalid_revisits:
         notes.append(f"재조회 응답 무효: {', '.join(r.invalid_revisits)}")
-    if r.login_redirect and notes:
-        notes.insert(0, "저장 요청 뒤 로그인 화면으로 이동")
     if notes:
         return "sink_probe_failed", "; ".join(notes)
     if r.checked_count == 0:

@@ -165,7 +165,6 @@ class SinkProbeResult:  # stored XSS 재조회 전 저장 여부 확인
     checked_urls: list[str] = field(default_factory=list)  # 주입 직후 마커를 찾아본 주소 (묶음 훑기 제외)
     invalid_revisits: list[str] = field(default_factory=list)  # 주입 직후 재조회가 무효(2xx·3xx 아님·로그인 이동)였던 주소 -> 확인 실패 근거
     post_status: int | None = None      # 마커 저장 요청 응답 코드
-    login_redirect: bool = False        # 저장 요청 뒤 로그인 화면으로 이동
     batch_id: int | None = None         # 몇 번째 묶음에서 마커를 주입했는지
     checked_count: int = 0              # 묶음 훑기에서 정상 조회한 페이지 수
     failed_urls: list[str] = field(default_factory=list)  # 묶음 훑기에서 조회 실패한 주소 -> 탐색 불완전

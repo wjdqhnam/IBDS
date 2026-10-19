@@ -28,8 +28,8 @@ docker run -u zap --name zap `
     "-config" "api.addrs.addr.name=.*" `
     "-config" "api.addrs.addr.regex=true" `
     "-config" "api.key=$API_KEY" `
-    "-config" "formhandler.fields.field(13).value=IBDS test" `
-    "-config" "formhandler.fields.field(14).value=IBDS test"  # Value Generator 기본 문장 단축 (13: comment 계열, 14: content 계열)
+    "-config" "formhandler.fields.field(13).value=Biscan test" `
+    "-config" "formhandler.fields.field(14).value=Biscan test"  # Value Generator 기본 문장 단축 (13: comment 계열, 14: content 계열)
 
 # 3. wait until ready (max 60s)
 Write-Host "[3/4] Waiting for ZAP to initialize..."
@@ -58,6 +58,7 @@ Write-Host "  Certificate saved: $CERT_PATH"
 
 # 5. generate zap_config.json
 $CONFIG_PATH = Join-Path $PSScriptRoot "config\zap_config.json"
+New-Item -ItemType Directory -Force (Split-Path $CONFIG_PATH) | Out-Null  # config 폴더가 없을 때 생성
 @{
     host    = "127.0.0.1"
     port    = $ZAP_PORT

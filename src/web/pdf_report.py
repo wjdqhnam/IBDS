@@ -4,7 +4,7 @@ from playwright.sync_api import sync_playwright
 
 # 화면 report.js와 같은 용어
 _VERDICT = {"potential_high": "취약 가능성 높음", "potential_medium": "취약 신호 관찰",
-            "inconclusive": "검토 필요", "potential_low": "공격 근거 미확인"}
+            "inconclusive": "판단 보류", "potential_low": "공격 근거 미확인"}
 _ORDER = list(_VERDICT)
 _PROGRESS = {"completed": "완료", "partial": "부분 완료", "failed": "실패", "not_run": "미실행"}
 _REASON = {"delivery_unknown": "전송 결과 불명", "attack_request_failed": "공격 요청 실패", "baseline_failed": "기준 요청 실패",
@@ -127,7 +127,7 @@ def render_html(report):
     kpis = "".join(f'<div class="kpi {key}"><span>{_e(label)}</span><strong>{counts.get(key, 0)}</strong></div>'
                    for key, label in _VERDICT.items())
     rates_line = (f"검사 지점 <b>{rates.get('points', len(groups))}개</b>, 완료율 <b>{_pct(rates['completion'])}</b>, "
-                  f"검토 필요율 <b>{_pct(rates['inconclusive'])}</b>, 침묵 음성 <b>{rates['silent_negatives']}건</b>, "
+                  f"판단 보류율 <b>{_pct(rates['inconclusive'])}</b>, 침묵 음성 <b>{rates['silent_negatives']}건</b>, "
                   f"오류 <b>{report.get('error_count', 0)}건</b>") if rates else f"검사 지점 <b>{len(groups)}개</b>"
 
     # 판정별로 나눈 검사 지점 표

@@ -8,8 +8,8 @@ from zapv2 import ZAPv2  # type: ignore
 from scan.normalize.param_filter import is_destructive_text
 from utilities.file_utils import load_json
 
-SESSION_NAME = "IBDSSession"
-CONTEXT_NAME = "IBDSContext"
+SESSION_NAME = "BiscanSession"
+CONTEXT_NAME = "BiscanContext"
 _AJAX_BROWSERS = 2  # Ajax Spider 헤드리스 브라우저 병렬 수 (메모리·대상 서버 부담 완화)
 _AJAX_MAX_CRAWL_DEPTH = 5  # Ajax Spider 최대 탐색 깊이 (ZAP 기본 10)
 _AJAX_MAX_CRAWL_STATES = 2000  # Ajax Spider 최대 탐색 상태 수 (ZAP 기본 0 = 무제한, 무한 탐색 방지용 상한)
